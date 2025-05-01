@@ -1,49 +1,54 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang=« fr »>
 <head>
-    <meta charset=« UTF-8 »>
-    <meta name=« viewport » content=« width=device-width, initial-scale=1.0 »>
-    <title>Mon Projet Grunge</title>
-    <style>
-        body {
-            background: #1d1f21; /* Fond sombre */
-            color: #b0b0b0; /* Texte gris clair */
-            font-family: ‘Courier New’, Courier, monospace; /* Police grunge */
-            text-align: center;
-            padding-top: 50px;
-        }
-        h1 {
-            font-size: 60px;
-            text-shadow: 2px 2px 5px #ff0000, 0 0 25px #ff0000, 0 0 5px darkred; /* Effet de texte grunge */
-        }
-        p {
-            font-size: 20px;
-            color: #ccc;
-            margin-top: 20px;
-        }
-        .glitch {
-            color: #39ff14;
-            position: relative;
-            display: inline-block;
-          }
-        .glitch::before {
-            content: attr(data-text);
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: #ff00ff;
-            z-index: -1;
-            animation: glitch 1s infinite;
-        }
-        @keyframes glitch {
-            0% { transform: translate(-2px, -2px); }
-            50% { transform: translate(2px, 2px); }
-            100% { transform: translate(-2px, -2px); }
-        }
-    </style>
+  <meta charset=« UTF-8 »>
+  <title>Mon site</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      font-family: « Courier New », monospace;
+      margin: 0;
+      padding: 20px;
+      background-image: url(‘https://www.transparenttextures.com/patterns/asfalt-dark.png’);
+    }
+
+    h1 {
+      color: #ff69b4;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+        max-width: 800px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border: 1px solid #444;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .pixel-heart {
+      width: 32px;
+      vertical-align: middle;
+    }
+  </style>
 </head>
 <body>
-    <h1 class=« glitch » data-text=« Mon Projet Grunge »>Mon Projet Grunge</h1>
-    <p>Bienvenue dans l’univers du grunge numérique !</p>
-    </body>
+  <div class=« container »>
+    <h1>Bienvenue</h1>
+    <p>Ceci est mon petit coin du web.</p>
+    <p>Tu peux ajouter ce que tu veux ici : texte, images, gifs, liens...</p>
+
+    <p><a href=« # »>Mon blog</a> | <a href=« # »>À propos</a> | <a href=« # »>Contact</a></p>
+  </div>
+</body>
 </html>
