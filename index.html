@@ -1,54 +1,123 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang=« fr »>
 <head>
-  <meta charset=« UTF-8 »>
-  <title>Mon site</title>
-  <style>
-    body {
-      background-color: #0d0d0d;
-      color: #e0e0e0;
-      font-family: « Courier New », monospace;
-      margin: 0;
-      padding: 20px;
-      background-image: url(‘https://www.transparenttextures.com/patterns/asfalt-dark.png’);
-    }
+    <meta charset=« UTF-8 »>
+    <meta name=« viewport » content=« width=device-width, initial-scale=1.0 »>
+    <title>Mon Projet Grunge</title>
+    <style>
+        /* Général */
+        body {
+            background: #1a1a1a; /* Fond sombre */
+            color: #fff; /* Texte en blanc */
+            font-family: ‘Courier New’, Courier, monospace; /* Police rétro */
+            margin: 0;
+            padding: 0;
+        }
 
-    h1 {
-      color: #ff69b4;
-      text-shadow: 1px 1px 2px #000;
-    }
+        /* Musique en fond */
+        audio {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: transparent;
+          }
 
-    a {
-      color: #00ffff;
-      text-decoration: none;
-    }
+        /* En-tête */
+        header {
+            text-align: center;
+            padding: 50px 0;
+            font-size: 3rem;
+            color: #ff6347; /* Orange-grunge */
+            text-shadow: 3px 3px 5px #000; /* Ombre du texte */
+        }
 
-    a:hover {
-      text-decoration: underline;
-    }
+        /* Section principale */
+        .main-content {
+            text-align: center;
+            margin: 50px 0;
+        }
 
-    .container {
-        max-width: 800px;
-      margin: auto;
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border: 1px solid #444;
-      box-shadow: 0 0 10px #000;
-    }
+        h1 {
+            font-size: 3rem;
+            color: #ff6347;
+        }
 
-    .pixel-heart {
-      width: 32px;
-      vertical-align: middle;
-    }
-  </style>
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        /* Images/Gifs */
+        img {
+            margin-top: 30px;
+            max-width: 100%;
+            height: auto;
+            border: 5px solid #ff6347;
+          }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff6347;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animation */
+        .flash {
+            animation: flash 1s infinite;
+        }
+
+        @keyframes flash {
+            0% { opacity: 1; }
+            50% { opacity: 0.2; }
+            100% { opacity: 1; }
+          }
+
+    </style>
 </head>
 <body>
-  <div class=« container »>
-    <h1>Bienvenue</h1>
-    <p>Ceci est mon petit coin du web.</p>
-    <p>Tu peux ajouter ce que tu veux ici : texte, images, gifs, liens...</p>
 
-    <p><a href=« # »>Mon blog</a> | <a href=« # »>À propos</a> | <a href=« # »>Contact</a></p>
-  </div>
+    <!-- Musique en fond -->
+    <audio autoplay loop>
+        <source src=« TA_MUSIQUE.mp3 » type=« audio/mp3 »>
+        Ton navigateur ne supporte pas la lecture audio.
+    </audio>
+
+    <!— En-tête —>
+    <header>
+        hellooo bienvenueeee !
+    </header>
+
+    <!— Section principale —>
+    <div class=« main-content »>
+        <h1>Un site fun et grunge</h1>
+        <p class=« flash »>retro.</p>
+        <!— Exemple d’une image ou un gif —>
+        <img src=« URL_DE_L_IMAGE » alt=« Sticker cool »>
+
+        <!— Ajouter plus d’images ou gifs si nécessaire —>
+        <img src=« URL_DU_GIF » alt=« gif cool »>
+
+        <p>Bienvenue sur mon projet grunge. C’est un espace de création, d’expérimentation, et de liberté.</p>
+    </div>
+
+    <!— Footer —>
+    <footer>
+        <p>Fait avec passion | <a href=« https://github.com/ton_nom »>Voir mon code sur GitHub</a></p>
+        </footer>
+
 </body>
 </html>
+
+
