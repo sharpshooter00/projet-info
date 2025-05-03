@@ -1,135 +1,100 @@
-
 <!DOCTYPE html>
 <html lang=« fr »>
 <head>
     <meta charset=« UTF-8 »>
     <meta name=« viewport » content=« width=device-width, initial-scale=1.0 »>
-    <title>Mon Projet Grunge</title>
+    <title>Grunge Alt Vibes</title>
     <style>
-        /* Général */
         body {
-            <img src=« https://i.imgur.com/FX92jG0.gif » alt=« grunge » width=« 150 »>
-<img src=« https://i.imgur.com/kszJhYN.gif » alt=« sadcore » width=« 150 »>
-<img src=« https://i.imgur.com/rKz7aYU.gif » alt=« emo 4ever » width=« 150 »>
-<img src=« https://i.imgur.com/xgxxrZx.gif » alt=« spacehey » width=« 150 »>
-<img src=« https://i.imgur.com/KNcv4UZ.gif » alt=« crying » width=« 150 »>
-<img src=« https://i.imgur.com/9J3Jxet.gif » alt=« I love HTML » width=« 150 »>
-<img src=« https://i.imgur.com/ZTCc0G5.gif » alt=« no sleep club » width=« 150 »>
-<img src=« https://i.imgur.com/yxXNUQ1.gif » alt=« cyberheart » width=« 150 »>
-            <a href='https://blinkies.cafe' target='_blank'><img src='<a href='https://blinkies.cafe' target='_blank'><img src='https://blinkies.cafe/b/display/blinkiesCafe-badge.gif' alt='blinkies.cafe | make your own blinkies!'></a>' alt='blinkies.cafe | make your own blinkies!'></a>
-            <img src=«< <a href='https://blinkies.cafe' target='_blank'><img src='https://blinkies.cafe/b/display/blinkiesCafe-badge.gif' alt='blinkies.cafe | make your own blinkies!'></a>» alt=« sticker » style=« width:100px; »>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/76o3swrJKdlvBCm8PRbCYE?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            background: #1a1a1a; /* Fond sombre */
-            color: #fff; /* Texte en blanc */
-            font-family: ‘Courier New’, Courier, monospace; /* Police rétro */
+            background-color: #111;
+            color: #ddd;
+            font-family: ‘Courier New’, Courier, monospace;
             margin: 0;
             padding: 0;
-        }
-
-        /* Musique en fond */
-        audio {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            background-color: transparent;
-          }
-
-        /* En-tête */
-        header {
             text-align: center;
-            padding: 50px 0;
-            font-size: 3rem;
-            color: #ff6347; /* Orange-grunge */
-            text-shadow: 3px 3px 5px #000; /* Ombre du texte */
         }
-
-        /* Section principale */
-        .main-content {
-            text-align: center;
-            margin: 50px 0;
-        }
-
+        
         h1 {
-            font-size: 3rem;
-            color: #ff6347;
+            font-size: 4rem;
+            color: #9b59b6; /* Violet */
+            text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8);
         }
 
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-top: 20px;
-        }
-
-        /* Images/Gifs */
-        img {
-            margin-top: 30px;
-            max-width: 100%;
-            height: auto;
-            border: 5px solid #ff6347;
-          }
-
-        /* Footer */
-        footer {
-            background: #333;
+        h2 {
             color: #fff;
-            padding: 20px;
-            text-align: center;
+            font-size: 2rem;
+            margin-top: 1rem;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
         }
 
-        footer a {
-            color: #ff6347;
+        .blinkies img {
+            margin: 10px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+            }
+
+        .blinkies img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .container a {
+            color: #9b59b6; /* Violet */
             text-decoration: none;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            display: inline-block;
+            transition: color 0.3s ease;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        .container a:hover {
+            color: #8e44ad; /* Violet foncé */
         }
 
-        /* Animation */
-        .flash {
-            animation: flash 1s infinite;
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #111;
+            color: #777;
+            font-size: 0.8rem;
+            border-top: 1px solid #333;
         }
-
-        @keyframes flash {
-            0% { opacity: 1; }
-            50% { opacity: 0.2; }
-            100% { opacity: 1; }
-          }
-
     </style>
 </head>
 <body>
 
-    <!-- Musique en fond -->
-    <audio autoplay loop>
-        <source src=« TA_MUSIQUE.mp3 » type=« audio/mp3 »>
-        Ton navigateur ne supporte pas la lecture audio.
-    </audio>
+    <h1>Grunge Alt Vibes</h1>
+    <h2>Bienvenue dans l’univers 2000s</h2>
+    <div class=« container »>
+        <p>Explorez les blinkies vintage :</p>
+        <div class=« blinkies »>
+            <a href=« https://www.glitter-graphics.com »><img src=« http://dl7.glitter-graphics.net/pub/33/33627qz0kw47zut.gif » width=« 85 » height=« 71 » border=« 0 »></a>
+            <br>
+            <a href=« https://www.glitter-graphics.com »><img src=« http://dl2.glitter-graphics.net/pub/1567/1567522x0jp0xn544.gif » width=« 57 » height=« 10 » border=« 0 »></a>
+            <br>
+            <a href=« https://www.glitter-graphics.com »><img src=« http://dl7.glitter-graphics.net/pub/1054/1054777j0822q2kr9.gif » width=« 150 » height=« 20 » border=« 0 »></a>
+            
+You sent
+<br>
+            <a href=« https://www.glitter-graphics.com »><img src=« http://dl.glitter-graphics.net/pub/854/854621cds3g62p8m.gif » width=« 40 » height=« 99 » border=« 0 »></a>
+        </div>
 
-    <!— En-tête —>
-    <header>
-        hellooo bienvenueeeee !
-    </header>
+        <p>Écoutez ma musique préférée :</p>
+        <iframe src=« https://open.spotify.com/embed/track/17YNmMy03QLPirmBzWxFa6?si=j3jKZEzFQTWft4V-ronH_A » width=« 300 » height=« 80 » frameBorder=« 0 » allow=« encrypted-media »></iframe>
 
-    <!— Section principale —>
-    <div class=« main-content »>
-        <h1>Un site fun et grunge</h1>
-        <p class=« flash »>retro.</p>
-        <!— Exemple d’une image ou un gif —>
-        <img src=« URL_DE_L_IMAGE » alt=« Sticker cool »>
-
-        <!— Ajouter plus d’images ou gifs si nécessaire —>
-        <img src=« URL_DU_GIF » alt=« gif cool »>
-
-        <p>Bienvenue sur mon projet grunge. C’est un espace de création, d’expérimentation, et de liberté.</p>
+        <a href=« https://spacehey.com » target=« _blank »>Découvrez Spacehey</a>
     </div>
 
-    <!— Footer —>
-    <footer>
-        <p>Fait avec passion | <a href=« https://github.com/ton_nom »>Voir mon code sur GitHub</a></p>
-        </footer>
-
+    <div class=« footer »>
+        <p>&copy; 2025 Grunge Alt Vibes - Un hommage aux années 2000</p>
+        </div>
 </body>
 </html>
-
-
