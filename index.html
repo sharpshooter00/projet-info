@@ -1,62 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MON SITE GRUNGE ALT</title>
+    <title>MINECRAFT ALT ZONE</title>
     <style>
         body {
-            background: #000;
-            color: #ff00ff;
-            font-family: 'Arial Black', sans-serif;
+            background: #000 url('https://i.imgur.com/8N7WyF4.jpg');
+            color: #55ff55;
+            font-family: 'Courier New', monospace;
             text-align: center;
             margin: 0;
             padding: 20px;
-            cursor: url('https://i.imgur.com/8mU7TQJ.gif'), auto;
+            cursor: url('https://i.imgur.com/minecraft-sword.png'), auto;
         }
         h1 {
-            text-shadow: 0 0 10px #00ffff;
+            text-shadow: 0 0 10px cyan;
             font-size: 2.5em;
+            margin-bottom: 30px;
         }
-        .gif-container {
-            margin: 20px auto;
-            padding: 15px;
-            max-width: 800px;
-            border: 3px dashed red;
-        }
-        img {
-            margin: 10px;
-            max-width: 100%;
-            height: auto;
-        }
-        .blinkies {
+        .player-container {
             background: #111;
-            padding: 10px;
-            margin-top: 30px;
+            border: 3px dashed #ff00ff;
+            padding: 15px;
+            width: 320px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+        .player-container::before {
+            content: "♫ OFFICIAL SOUNDTRACK ♫";
+            color: cyan;
+            position: absolute;
+            top: -12px;
+            left: 10px;
+            background: #000;
+            padding: 0 5px;
+            font-size: 0.9em;
+        }
+        iframe {
+            border: 1px solid lime;
+            margin: 10px 0;
+        }
+        .crt-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 255, 255, 0.05),
+                rgba(0, 255, 255, 0.05) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            z-index: 9999;
         }
         marquee {
-            color: lime;
+            color: hotpink;
             font-size: 1.2em;
             margin: 20px 0;
+            text-shadow: 0 0 5px #ff00ff;
+        }
+        .minecraft-btn {
+            background: #000;
+            color: lime;
+            border: 2px dashed red;
+            padding: 8px 15px;
+            font-family: 'Courier New';
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .minecraft-btn:hover {
+            background: lime;
+            color: #000;
         }
     </style>
 </head>
 <body>
-    <h1>☠️ MA ZONE INTERDITE ☠️</h1>
-    
-    <!-- Tes GIFs principaux -->
-    <div class="gif-container">
-        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGs2ZnliYmFidmhndGNyZGluN2F2aHU3bzZqMGZqOGI0N2NraXdqOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IeYftUBqrW8tMoQkaf/giphy.gif" alt="GIF animé 1">
-        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2lpOG5qbW8zNndhd3U1MWhnazB0ZmFzNGtkdDlqcWRoYng5YnY2NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4ilFRqgbzbx4c/giphy.gif" alt="GIF animé 2">
+    <h1>⛏️ MINECRAFT ALT ZONE ⛏️</h1>
+
+    <!-- Spotify Player -->
+    <div class="player-container">
+        <iframe 
+            src="https://open.spotify.com/embed/track/4K0odcECsBvgzv9Lr9z4kd?si=1dcd1b0a3e294163" 
+            width="300" 
+            height="80" 
+            frameborder="0" 
+            allowtransparency="true" 
+            allow="encrypted-media">
+        </iframe>
+        <p style="color: lime; margin: 5px 0 0 0; font-size: 0.9em;">C418 - Minecraft (Volume Alpha)</p>
     </div>
 
-    <!-- Blinkies supplémentaires -->
-    <div class="blinkies">
-        <img src="https://media.tenor.com/bCtsM.gif" alt="GIF 3">
-        <img src="https://media.tenor.com/dyOHFrSwbPx.gif" alt="GIF 4">
-        <img src="https://media.tenor.com/grVk8QcdRBn.gif" alt="GIF 5">
-        <img src="https://media.tenor.com/nLPpBHEYKpQ.gif" alt="GIF 6">
-        <img src="https://media.tenor.com/bgCgn.gif" alt="GIF 7">
-    </div>
+    <!-- Navigation -->
+    <a href="#" class="minecraft-btn">ENTER SERVER</a>
+    <a href="#" class="minecraft-btn">TEXTURE PACKS</a>
 
-    <marquee behavior="scroll" direction="left">✧･ﾟ: *✧･ﾟ:* WARNING: HIGH VOLTAGE AESTHETIC *:･ﾟ✧*:･ﾟ✧</marquee>
+    <marquee>✨ CRAFTED WITH CHAOS | F5 TO RELOAD THE 90s ✨</marquee>
+
+    <!-- CRT Effect -->
+    <div class="crt-overlay"></div>
 </body>
 </html>
