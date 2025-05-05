@@ -1,105 +1,285 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MINECRAFT ALT ZONE</title>
+    <title>MINECRAFT // ALT ZONE</title>
     <style>
+        /* === GLOBAL STYLES === */
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('https://assets.codepen.io/1213385/Minecraft.ttf') format('truetype');
+        }
+        
         body {
-            background: #000 url('https://i.imgur.com/8N7WyF4.jpg');
-            color: #55ff55;
-            font-family: 'Courier New', monospace;
+            background: #000 url('https://i.imgur.com/nM9WwXh.png');
+            color: #55FF55;
+            font-family: 'Minecraft', monospace;
             text-align: center;
             margin: 0;
-            padding: 20px;
-            cursor: url('https://i.imgur.com/minecraft-sword.png'), auto;
+            padding: 0;
+            cursor: url('https://i.imgur.com/3JQZaXG.png'), auto;
+            overflow-x: hidden;
         }
-        h1 {
-            text-shadow: 0 0 10px cyan;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-        }
-        .player-container {
-            background: #111;
-            border: 3px dashed #ff00ff;
-            padding: 15px;
-            width: 320px;
-            margin: 0 auto 30px;
-            position: relative;
-        }
-        .player-container::before {
-            content: "♫ OFFICIAL SOUNDTRACK ♫";
-            color: cyan;
-            position: absolute;
-            top: -12px;
-            left: 10px;
-            background: #000;
-            padding: 0 5px;
-            font-size: 0.9em;
-        }
-        iframe {
-            border: 1px solid lime;
-            margin: 10px 0;
-        }
-        .crt-overlay {
+
+        /* === CRT MONITOR EFFECT === */
+        .crt::before {
+            content: "";
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    0deg, 
+                    rgba(0, 255, 255, 0.03), 
+                    transparent 1px, 
+                    transparent 2px
+                ),
+                radial-gradient(
+                    circle at center,
+                    transparent 0%,
+                    rgba(0, 0, 0, 0.8) 100%
+                );
             pointer-events: none;
-            background: repeating-linear-gradient(
-                0deg,
-                rgba(0, 255, 255, 0.05),
-                rgba(0, 255, 255, 0.05) 1px,
-                transparent 1px,
-                transparent 2px
-            );
             z-index: 9999;
+            animation: flicker 0.15s infinite alternate;
         }
-        marquee {
-            color: hotpink;
-            font-size: 1.2em;
+
+        @keyframes flicker {
+            0% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+
+        /* === HEADER === */
+        header {
+            background: linear-gradient(to right, #000000, #1a1a1a, #000000);
+            border-bottom: 4px solid #55FF55;
+            padding: 15px 0;
+            position: relative;
+        }
+
+        h1 {
+            text-shadow: 
+                0 0 5px #55FF55, 
+                0 0 10px #55FF55,
+                2px 2px 0 #3A3A3A;
+            font-size: 3em;
+            margin: 0;
+            color: #FFAA00;
+            letter-spacing: -1px;
+            animation: glitch 3s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(-2px, -2px); }
+        }
+
+        /* === MAIN CONTENT === */
+        .content-box {
+            background: rgba(0, 0, 0, 0.7);
+            border: 4px double #55FF55;
+            width: 80%;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 0 20px #55FF55;
+        }
+
+        .content-box::before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            border: 1px solid #FF00FF;
+            pointer-events: none;
+        }
+
+        /* === MOB GALLERY === */
+        .mob-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
             margin: 20px 0;
-            text-shadow: 0 0 5px #ff00ff;
         }
-        .minecraft-btn {
+
+        .mob-card {
+            background: #1a1a1a;
+            border: 2px solid #3A3A3A;
+            padding: 10px;
+            width: 120px;
+            transition: all 0.3s;
+        }
+
+        .mob-card:hover {
+            transform: scale(1.1);
+            border-color: #FF00FF;
+            box-shadow: 0 0 15px #FF00FF;
+            z-index: 10;
+        }
+
+        .mob-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            image-rendering: pixelated;
+        }
+
+        /* === SPOTIFY PLAYER === */
+        .music-player {
             background: #000;
-            color: lime;
-            border: 2px dashed red;
-            padding: 8px 15px;
-            font-family: 'Courier New';
-            margin: 10px;
-            text-decoration: none;
-            display: inline-block;
+            border: 3px dashed #55FF55;
+            padding: 15px;
+            margin: 30px auto;
+            width: 300px;
+            position: relative;
         }
-        .minecraft-btn:hover {
-            background: lime;
+
+        .music-player::after {
+            content: "♫ OFFICIAL SOUNDTRACK ♫";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #000;
+            padding: 0 10px;
+            color: #FF00FF;
+            font-size: 0.9em;
+        }
+
+        /* === BUTTONS === */
+        .btn {
+            background: linear-gradient(to bottom, #3A3A3A, #1a1a1a);
+            color: #FFF;
+            border: 2px solid #55FF55;
+            padding: 8px 25px;
+            margin: 10px;
+            font-family: 'Minecraft';
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to bottom, #55FF55, #1a1a1a);
             color: #000;
+            text-shadow: 0 0 5px #FFF;
+            box-shadow: 0 0 15px #55FF55;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, 
+                #FF00FF, #55FF55, #FFAA00, #55FF55, #FF00FF);
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0;
+            transition: all 0.5s;
+        }
+
+        .btn:hover::before {
+            opacity: 0.7;
+            animation: gradient 3s linear infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 400% 50%; }
+        }
+
+        /* === SECRET HOVER EFFECTS === */
+        .secret {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 8px;
+            color: transparent;
+        }
+
+        .secret:hover {
+            color: #FF00FF;
+            font-size: 16px;
+            text-shadow: 0 0 10px #55FF55;
         }
     </style>
 </head>
-<body>
-    <h1>⛏️ MINECRAFT ALT ZONE ⛏️</h1>
-
-    <!-- Spotify Player -->
-    <div class="player-container">
-        <iframe 
-            src="https://open.spotify.com/embed/track/4K0odcECsBvgzv9Lr9z4kd?si=1dcd1b0a3e294163" 
-            width="300" 
-            height="80" 
-            frameborder="0" 
-            allowtransparency="true" 
-            allow="encrypted-media">
-        </iframe>
-        <p style="color: lime; margin: 5px 0 0 0; font-size: 0.9em;">C418 - Minecraft (Volume Alpha)</p>
+<body class="crt">
+    <!-- FAKE LOGIN SCREEN -->
+    <div id="login" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 10000; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h2 style="color: #55FF55; margin-bottom: 30px;">MINECRAFT ALT ZONE</h2>
+        <input type="text" placeholder="Username" style="background: #111; color: #55FF55; border: 1px solid #55FF55; padding: 8px; margin: 5px; font-family: 'Minecraft'; width: 200px;">
+        <input type="password" placeholder="Password" style="background: #111; color: #55FF55; border: 1px solid #55FF55; padding: 8px; margin: 5px; font-family: 'Minecraft'; width: 200px;">
+        <button onclick="document.getElementById('login').style.display='none'" class="btn" style="margin-top: 20px;">ENTER</button>
     </div>
 
-    <!-- Navigation -->
-    <a href="#" class="minecraft-btn">ENTER SERVER</a>
-    <a href="#" class="minecraft-btn">TEXTURE PACKS</a>
+    <!-- MAIN CONTENT -->
+    <header>
+        <h1>MINECRAFT // ALT ZONE</h1>
+    </header>
 
-    <marquee>✨ CRAFTED WITH CHAOS | F5 TO RELOAD THE 90s ✨</marquee>
+    <div class="content-box">
+        <h2>MOB GALLERY</h2>
+        <div class="mob-gallery">
+            <div class="mob-card">
+                <img src="https://i.imgur.com/CreepyFace.png" alt="Creeper">
+                <p>CREEPER</p>
+                <p style="color: #FF5555;">💥 BOOM!</p>
+            </div>
+            <div class="mob-card">
+                <img src="https://i.imgur.com/EndermanDude.png" alt="Enderman">
+                <p>ENDERMAN</p>
+                <p style="color: #AA00FF;">👀 DON'T LOOK</p>
+            </div>
+            <div class="mob-card">
+                <img src="https://i.imgur.com/PIXEL_PIG.png" alt="Pig">
+                <p>PIG</p>
+                <p style="color: #FFAAFF;">🐷 OINK!</p>
+            </div>
+            <div class="mob-card">
+                <img src="https://i.imgur.com/ZombieDude.png" alt="Zombie">
+                <p>ZOMBIE</p>
+                <p style="color: #55FF55;">🧟 GRRR!</p>
+            </div>
+        </div>
+    </div>
 
-    <!-- CRT Effect -->
-    <div class="crt-overlay"></div>
+    <div class="content-box">
+        <h2>OFFICIAL SOUNDTRACK</h2>
+        <div class="music-player">
+            <iframe src="https://open.spotify.com/embed/track/4K0odcECsBvgzv9Lr9z4kd" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <p style="color: #55FF55; margin-top: 5px;">C418 - Sweden</p>
+        </div>
+    </div>
+
+    <div>
+        <button class="btn">JOIN SERVER</button>
+        <button class="btn">TEXTURE PACKS</button>
+        <button class="btn">SCREENSHOTS</button>
+    </div>
+
+    <!-- SECRET EASTER EGG -->
+    <a href="secret.html" class="secret">.</a>
+
+    <!-- FOOTER -->
+    <div style="margin: 40px 0 20px;">
+        <img src="https://i.imgur.com/3JQZaXG.png" width="40" style="image-rendering: pixelated;">
+        <img src="https://i.imgur.com/DiamondOre.png" width="40" style="image-rendering: pixelated;">
+        <img src="https://i.imgur.com/RedstoneDust.png" width="40" style="image-rendering: pixelated;">
+        <img src="https://i.imgur.com/GoldIngot.png" width="40" style="image-rendering: pixelated;">
+    </div>
 </body>
 </html>
