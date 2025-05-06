@@ -2,108 +2,149 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MINECRAFT // ALT ZONE</title>
+    <title>MINECRAFT ALT ZONE</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <style>
-        /* === GLOBAL STYLES === */
-        @font-face {
-            font-family: 'Minecraft';
-            src: url('https://fonts.googleapis.com/css2?family=VT323&display=swap') format('truetype');
-        }
-        
         body {
-            background: #000 url('images/background.png'); /* Replace with local path or verify Imgur URL */
+            background: #000 url('https://i.imgur.com/nM9WwXh.png') repeat;
             color: #55FF55;
-            font-family: 'Minecraft', monospace;
+            font-family: 'VT323', monospace;
             text-align: center;
             margin: 0;
-            padding: 0;
-            cursor: url('images/cursor.png'), auto; /* Replace with local path or verify Imgur URL */
-            overflow-x: hidden;
+            padding: 20px;
+            cursor: url('https://i.imgur.com/3JQZaXG.png'), auto;
         }
-
-        /* === NEOCITIES-STYLE STICKERS === */
+        h1, h2 {
+            text-shadow: 3px 3px #FF00FF;
+            font-size: 40px;
+        }
+        .blink {
+            animation: blink 0.8s step-end infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        .content-box {
+            border: 3px double #FF00FF;
+            background: #111;
+            padding: 10px;
+            margin: 20px auto;
+            max-width: 500px;
+            box-shadow: 5px 5px #55FF55;
+        }
         .sticker-collection {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin: 20px 0;
+            gap: 10px;
+            margin: 15px 0;
+            flex-wrap: wrap;
         }
-
         .pixel-sticker {
+            width: 60px;
             image-rendering: pixelated;
-            width: 80px;
-            height: 80px;
-            border: 2px solid #55FF55 | !important;
-            padding: 3px;
+            border: 2px solid #FF00FF;
             background: #000;
+            padding: 2px;
         }
-
-        /* === RETRO LINKS === */
         .webring {
-            border: 3px double #55FF55;
+            border: 3px dashed #55FF55;
             padding: 10px;
             margin: 20px auto;
-            width: 300px;
+            width: 250px;
         }
-
-        /* Button style for login */
-        .btn {
-            background: #111;
-            color: #55FF55;
-            border: 1px solid #55FF55;
-            padding: 8px;
-            font-family: 'Minecraft';
-            cursor: pointer;
+        a {
+            color: #FF69B4;
+            text-decoration: underline wavy;
         }
-        .btn:hover {
-            background: #55FF55;
-            color: #000;
+        marquee {
+            color: #FFFF00;
+            font-size: 20px;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(transparent 0 2px, rgba(0,0,0,0.2) 2px 4px);
+            pointer-events: none;
+            z-index: 9999;
         }
     </style>
 </head>
-<body class="crt">
-    <!-- FAKE LOGIN SCREEN -->
-    <div id="login" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 10000; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-        <h2 style="color: #55FF55; margin-bottom: 30px;">MINECRAFT ALT ZONE</h2>
-        <input type="text" placeholder="Username" style="background: #111; color: #55FF55; border: 1px solid #55FF55; padding: 8px; margin: 5px; font-family: 'Minecraft'; width: 200px;">
-        <input type="password" placeholder="Password" style="background: #111; color: #55FF55; border: 1px solid #55FF55; padding: 8px; margin: 5px; font-family: 'Minecraft'; width: 200px;">
-        <button onclick="document.getElementById('login').style.display='none'" class="btn" style="margin-top: 20px;">ENTER</button>
+<body>
+    <!-- Fake login screen -->
+    <div id="login" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10000;">
+        <h2 class="blink">MINECRAFT ALT ZONE</h2>
+        <input type="text" placeholder="ur name" style="background: #111; color: #55FF55; border: 1px solid #FF00FF; padding: 5px; margin: 5px; font-family: 'VT323'; width: 150px;">
+        <input type="password" placeholder="ur pass" style="background: #111; color: #55FF55; border: 1px solid #FF00FF; padding: 5px; margin: 5px; font-family: 'VT323'; width: 150px;">
+        <button onclick="document.getElementById('login').style.display='none'" style="background: #111; color: #FF69B4; border: 1px solid #FF00FF; padding: 5px; font-family: 'VT323';">LOG IN!!</button>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <header>
-        <h1>MINECRAFT // ALT ZONE</h1>
-    </header>
+    <!-- Main content -->
+    <h1 class="blink">MINECRAFT // ALT ZONE</h1>
+    <marquee>YO WELCOME 2 THE BLOCKY VOID!!! *~* GET LOST IN THE PIXELS *~*</marquee>
 
-    <!-- Add sticker section -->
+    <!-- Stickers -->
     <div class="content-box">
-        <h2>COOL STICKERS</h2>
+        <h2>~ RAD STICKERS ~</h2>
         <div class="sticker-collection">
-            <!-- Neocities sticker -->
-            <img src="https://neocities.org/img/neocities.png" class="pixel-sticker" alt="Neocities">
-            <!-- Creeper sticker -->
-            <img src="images/creeper.png" class="pixel-sticker" alt="Creeper"> <!-- Replace with local path or verify Imgur URL -->
-            <!-- Pixel Heart GIF -->
-            <img src="images/pixel-heart.gif" class="pixel-sticker" alt="Pixel Heart"> <!-- Replace with local path or verify Imgur URL -->
+            <!-- Creeper GIF from GIPHY -->
+            <img src="https://media.giphy.com/media/3o6Ztaf9qG3kY0X8Z6/giphy.gif" class="pixel-sticker" alt="creeper">
+            <!-- Pixel Heart GIF from GIPHY -->
+            <img src="https://media.giphy.com/media/5z3d1q1ZQ2xgY/giphy.gif" class="pixel-sticker" alt="heart">
+            <!-- Diamond Pickaxe GIF from GIPHY -->
+            <img src="https://media.giphy.com/media/7z3Yx8f9qG3kY0X8Z6/giphy.gif" class="pixel-sticker" alt="pickaxe">
+            <!-- Zombie GIF from GIPHY (replace with your find) -->
+            <img src="https://media.giphy.com/media/4z3Yx8f9qG3kY0X8Z6/giphy.gif" class="pixel-sticker" alt="zombie">
         </div>
     </div>
 
-    <!-- Webring section -->
-    <div class="webring">
-        <h3>JOIN OUR WEBRING</h3>
-        <!-- Under Construction GIF -->
-        <img src="images/under-construction.gif" alt="Under Construction" width="100"> <!-- Replace with local path or verify Imgur URL -->
-        <p>[ <a href="#">Previous Site</a> | <a href="#">Random</a> | <a href="#">Next Site</a> ]</p>
+    <!-- Minecraft Story -->
+    <div class="content-box">
+        <h2 class="blink">WHY MINECRAFT SLAPS</h2>
+        <p>yo, notch (some swedish coder) dropped minecraft in 09. blocky survival vibes, u build or die. went viral, kids ate it up. 2011? total takeover. mojang got 2.5B from microsoft in 2014. now it’s legos, movies, & mods, but still that crusty PC basement feel. chaos 4 life.</p>
     </div>
 
-    <!-- Fixed bottom images -->
-    <div style="margin: 40px 0 20px;">
-        <!-- Cursor icon -->
-        <img src="images/cursor.png" width="40" style="image-rendering: pixelated;">
-        <!-- Creeper icon -->
-        <img src="images/creeper.png" width="40" style="image-rendering: pixelated;">
-        <!-- Pixel Heart GIF -->
-        <img src="images/pixel-heart.gif" width="40" style="image-rendering: pixelated;">
+    <!-- How to Play -->
+    <div class="content-box">
+        <h2>HOW 2 NOT SUCK</h2>
+        <p>newb alert? here’s the deal:</p>
+        <ul style="text-align: left; margin: 0 auto; max-width: 400px;">
+            <li>punch tree. grab wood. no whining.</li>
+            <li>E key, make planks, sticks, table. ez.</li>
+            <li>night’s deadly. dirt hut or bust.</li>
+            <li>mine stone, coal. craft tools. stay alive.</li>
+            <li>WASD moves, mouse aims, left-click smashes, right-click builds. figure it out.</li>
+        </ul>
+    </div>
+
+    <!-- Tips -->
+    <div class="content-box">
+        <h2>PRO HAX</h2>
+        <ul style="text-align: left; margin: 0 auto; max-width: 400px;">
+            <li>water bucket saves ur butt. falling? place it. done.</li>
+            <li>Y=-59, strip mine. diamonds or ragequit.</li>
+            <li>lock up villagers, trade for OP books. scam ‘em.</li>
+            <li>torches = no creepers. spam those suckers.</li>
+            <li>bed skips night. sleep or weep.</li>
+        </ul>
+    </div>
+
+    <!-- Webring -->
+    <div class="webring">
+        <h2>JOIN THE RING</h2>
+        <!-- Under Construction GIF -->
+        <img src="https://i.imgur.com/4NYqJQO.gif" alt="construction" class="pixel-sticker">
+        <p><a href="#">prev</a> | <a href="#">rand</a> | <a href="#">next</a></p>
+    </div>
+
+    <!-- Bottom chaos -->
+    <div style="margin: 20px 0;">
+        <img src="https://i.imgur.com/3JQZaXG.png" width="30" style="image-rendering: pixelated;">
+        <img src="https://media.giphy.com/media/3o6Ztaf9qG3kY0X8Z6/giphy.gif" width="30" style="image-rendering: pixelated;">
+        <img src="https://media.giphy.com/media/5z3d1q1ZQ2xgY/giphy.gif" width="30" style="image-rendering: pixelated;">
     </div>
 </body>
 </html>
