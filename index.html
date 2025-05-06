@@ -2,89 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MINECRAFT // ALT ZONE</title>
     <style>
         /* === GLOBAL STYLES === */
         @font-face {
             font-family: 'Minecraft';
-            src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css') format('truetype');
+            src: url('https://assets.codepen.io/1213385/Minecraft.ttf') format('truetype');
         }
         
         body {
-            background: #000 url('https://i.imgur.com/nM9WwXh.png');
+            background: #000 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYSURBVBhXY2BgYGDgYGBgYOBgYGBgYAAAaQAB7jZ4cQAAAABJRU5ErkJggg==') repeat;
             color: #55FF55;
             font-family: 'Minecraft', monospace;
             text-align: center;
             margin: 0;
             padding: 0;
-            cursor: url('https://i.imgur.com/3JQZaXG.png'), auto;
+            cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABOSURBVDhPY2AYBSMDEwMjAwMDIyMjIyMDA8OBAwMCY2NjY2NjY2NjAwPDgQMBAmNiY2NjY2NjY2NjAwPDgQMBAmNiY2NjY2NjY2NjAwPDgQEAdgAAx8QhWAAAAABJRU5ErkJggg=='), auto;
             overflow-x: hidden;
         }
 
-        /* ... (keep previous CSS styles) ... */
-
-        /* === NEOCITIES-STYLE STICKERS === */
-        .sticker-collection {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 20px 0;
+        /* === CRT MONITOR EFFECT === */
+        .crt::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    0deg, 
+                    rgba(0, 255, 255, 0.03), 
+                    transparent 1px, 
+                    transparent 2px
+                ),
+                radial-gradient(
+                    circle at center,
+                    transparent 0%,
+                    rgba(0, 0, 0, 0.8) 100%
+                );
+            pointer-events: none;
+            z-index: 9999;
+            animation: flicker 0.15s infinite alternate;
         }
 
-        .pixel-sticker {
-            image-rendering: pixelated;
-            width: 80px;
-            height: 80px;
-            border: 2px solid #55FF55;
-            padding: 3px;
-            background: #000;
+        @keyframes flicker {
+            0% { opacity: 0.8; }
+            100% { opacity: 1; }
         }
 
-        /* === RETRO LINKS === */
-        .webring {
-            border: 3px double #55FF55;
-            padding: 10px;
-            margin: 20px auto;
-            width: 300px;
+        /* === HEADER === */
+        header {
+            background: linear-gradient(to right, #000000, #1a1a1a, #000000);
+            border-bottom: 4px solid #55FF55;
+            padding: 15px 0;
+            position: relative;
         }
-    </style>
-</head>
-<body class="crt">
-    <!-- FAKE LOGIN SCREEN -->
-    <div id="login" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 10000; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-        <h2 style="color: #55FF55; margin-bottom: 30px;">MINECRAFT ALT ZONE</h2>
-        <input type="text" placeholder="Username" style="background: #111; color: #55FF55; border: 1px solid #55FF55; padding: 8px; margin: 5px; font-family: 'Minecraft'; width: 200px;">
-        <input type="password" placeholder="Password" style="background: #111; color: #55FF55; border: 1px solid #55FF55; padding: 8px; margin: 5px; font-family: 'Minecraft'; width: 200px;">
-        <button onclick="document.getElementById('login').style.display='none'" class="btn" style="margin-top: 20px;">ENTER</button>
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <header>
-        <h1>MINECRAFT // ALT ZONE</h1>
-    </header>
+        h1 {
+            text-shadow: 
+                0 0 5px #55FF55, 
+                0 0 10px #55FF55,
+                2px 2px 0 #3A3A3A;
+            font-size: 3em;
+            margin: 0;
+            color: #FFAA00;
+            letter-spacing: -1px;
+            animation: glitch 3s infinite;
+        }
 
-    <!-- Add sticker section -->
-    <div class="content-box">
-        <h2>COOL STICKERS</h2>
-        <div class="sticker-collection">
-            <img src="https://neocities.org/img/neocities.png" class="pixel-sticker" alt="Neocities">
-            <img src="https://i.imgur.com/5E4vJzP.png" class="pixel-sticker" alt="Creeper">
-            <img src="https://i.imgur.com/zP781V9.gif" class="pixel-sticker" alt="Pixel Heart">
-        </div>
-    </div>
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(-2px, -2px); }
+        }
 
-    <!-- Webring section -->
-    <div class="webring">
-        <h3>JOIN OUR WEBRING</h3>
-        <img src="https://i.imgur.com/4NYqJQO.gif" alt="Under Construction" width="100">
-        <p>[ <a href="#">Previous Site</a> | <a href="#">Random</a> | <a href="#">Next Site</a> ]</p>
-    </div>
-
-    <!-- Fixed broken closing div -->
-    <div style="margin: 40px 0 20px;">
-        <img src="https://i.imgur.com/3JQZaXG.png" width="40" style="image-rendering: pixelated;">
-        <img src="https://i.imgur.com/5E4vJzP.png" width="40" style="image-rendering: pixelated;">
-        <img src="https://i.imgur.com/zP781V9.gif" width="40" style="image-rendering: pixelated;">
-    </div>
-</body>
-</html>
+        /* === MAIN CONTENT === */
+        .content-box {
+            background: rgba(0, 0, 0, 0.7);
+            border: 4px double #55FF55;
+            width: 80%;
+            max-width: 700px;
+lesson: Please make sure to include all the necessary closing tags and avoid any syntax errors in the HTML and CSS. Ensure that all images and assets are either properly linked or embedded to prevent loading issues. Provide clear instructions for hosting assets locally to avoid CORS issues. Double-check the code for completeness before submitting.
