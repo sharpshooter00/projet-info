@@ -1,159 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>MINECRAFT ALT ZONE</title>
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      background: #000 url('https://media.giphy.com/media/cDYIcVbwRljoFz4sZP/giphy.gif') repeat;
-      color: #55FF55;
-      font-family: 'VT323', monospace;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-      cursor: auto;
-    }
-    h1, h2 {
-      text-shadow: 3px 3px #FF00FF;
-      font-size: 40px;
-    }
-    .blink {
-      animation: blink 0.8s step-end infinite;
-    }
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-    .content-box {
-      border: 3px double #FF00FF;
-      background: #111;
-      padding: 15px;
-      margin: 20px auto;
-      max-width: 600px;
-      box-shadow: 5px 5px #55FF55;
-      text-align: left;
-    }
-    .sticker-collection {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 15px 0;
-      flex-wrap: wrap;
-    }
-    .pixel-sticker {
-      width: 60px;
-      image-rendering: pixelated;
-      border: 2px solid #FF00FF;
-      background: #000;
-      padding: 2px;
-    }
-    .webring {
-      border: 3px dashed #55FF55;
-      padding: 10px;
-      margin: 20px auto;
-      width: 260px;
-      text-align: center;
-    }
-    a {
-      color: #FF69B4;
-      text-decoration: underline wavy;
-    }
-    marquee {
-      color: #FFFF00;
-      font-size: 20px;
-    }
-    body::after {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: repeating-linear-gradient(transparent 0 2px, rgba(0,0,0,0.2) 2px 4px);
-      pointer-events: none;
-      z-index: 9999;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    iframe {
-      margin-top: 10px;
-      border: 3px solid #FF00FF;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <title>MINECRAFT ALT ZONE</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            background: #000 url('https://media.giphy.com/media/cDYIcVbwRljoFz4sZP/giphy.gif') repeat;
+            color: #55FF55;
+            font-family: 'VT323', monospace;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            cursor: auto;
+        }
+        h1, h2 {
+            text-shadow: 3px 3px #FF00FF;
+            font-size: 40px;
+        }
+        .blink {
+            animation: blink 0.8s step-end infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        .content-box {
+            border: 3px double #FF00FF;
+            background: #111;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 5px 5px #55FF55;
+            text-align: left;
+        }
+        .sticker-collection {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        .pixel-sticker {
+            width: 60px;
+            image-rendering: pixelated;
+            border: 2px solid #FF00FF;
+            background: #000;
+            padding: 2px;
+        }
+        .webring {
+            border: 3px dashed #55FF55;
+            padding: 10px;
+            margin: 20px auto;
+            width: 260px;
+            text-align: center;
+        }
+        a {
+            color: #FF69B4;
+            text-decoration: underline wavy;
+        }
+        marquee {
+            color: #FFFF00;
+            font-size: 20px;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(transparent 0 2px, rgba(0,0,0,0.2) 2px 4px);
+            pointer-events: none;
+            z-index: 9999;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
-  <!-- Fake login screen -->
-  <div id="login" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10000;">
-    <h2 class="blink">MINECRAFT ALT ZONE</h2>
-    <input type="text" placeholder="Username" style="background: #111; color: #55FF55; border: 1px solid #FF00FF; padding: 5px; margin: 5px; font-family: 'VT323'; width: 150px;" />
-    <input type="password" placeholder="Password" style="background: #111; color: #55FF55; border: 1px solid #FF00FF; padding: 5px; margin: 5px; font-family: 'VT323'; width: 150px;" />
-    <button onclick="document.getElementById('login').style.display='none'" style="background: #111; color: #FF69B4; border: 1px solid #FF00FF; padding: 5px; font-family: 'VT323'; cursor: pointer;">Log In</button>
-  </div>
-
-  <!-- Main content -->
-  <h1 class="blink">MINECRAFT // ALT ZONE</h1>
-  <marquee>Welcome to the blocky void! Explore, build, and survive in the world of Minecraft.</marquee>
-
-  <!-- Minecraft Music Embed (YouTube) -->
-  <iframe width="300" height="200" src="https://www.youtube.com/embed/DJbHZdu5LtE?autoplay=1&loop=1&playlist=DJbHZdu5LtE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-  <!-- Stickers -->
-  <div class="content-box" style="text-align:center;">
-    <h2>Featured Stickers</h2>
-    <div class="sticker-collection">
-      <img src="https://media.giphy.com/media/Nx4C51UKPqEpsYDz58/giphy.gif" class="pixel-sticker" alt="Sticker 1" />
-      <img src="https://media.giphy.com/media/9rjIqptcvei1XesMjM/giphy.gif" class="pixel-sticker" alt="Sticker 2" />
-      <img src="https://media.giphy.com/media/FoSWIVqRYWPEFftuVG/giphy.gif" class="pixel-sticker" alt="Sticker 3" />
-      <img src="https://media.giphy.com/media/wNXPiMSaE1cidZzZPM/giphy.gif" class="pixel-sticker" alt="Sticker 4" />
-      <img src="https://media.giphy.com/media/3og0IEIcBeypT4DbyM/giphy.gif" class="pixel-sticker" alt="Sticker 5" />
-      <img src="https://media.tenor.com/dQ6u8owuWS7AAAAAC/pixel-art.gif" class="pixel-sticker" alt="Sticker 6" />
-      <img src="https://media.tenor.com/lnCwYVpsyBGAAAAAC/pixel-art.gif" class="pixel-sticker" alt="Sticker 7" />
+    <!-- Fake login screen -->
+    <div id="login" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10000;">
+        <h2 class="blink">MINECRAFT ALT ZONE</h2>
+        <input type="text" placeholder="Username" style="background: #111; color: #55FF55; border: 1px solid #FF00FF; padding: 5px; margin: 5px; font-family: 'VT323'; width: 150px;" />
+        <input type="password" placeholder="Password" style="background: #111; color: #55FF55; border: 1px solid #FF00FF; padding: 5px; margin: 5px; font-family: 'VT323'; width: 150px;" />
+        <button onclick="document.getElementById('login').style.display='none'" style="background: #111; color: #FF69B4; border: 1px solid #FF00FF; padding: 5px; font-family: 'VT323'; cursor: pointer;">Log In</button>
     </div>
-  </div>
 
-  <!-- Minecraft Story -->
-  <div class="content-box">
-    <h2>The Story of Minecraft</h2>
-    <p>
-      Minecraft was created by Markus "Notch" Persson and first released in 2009 as an independent project. It quickly gained popularity for its unique sandbox gameplay, allowing players to explore, build, and survive in a procedurally generated world made of blocks. Over time, the game evolved with new features, biomes, and dimensions such as the Nether and The End. In 2014, Mojang, the company behind Minecraft, was acquired by Microsoft for $2.5 billion. Today, Minecraft remains one of the best-selling video games worldwide, inspiring creativity and community across all ages.
-    </p>
-  </div>
+    <!-- Main content -->
+    <h1 class="blink">MINECRAFT // ALT ZONE</h1>
+    <marquee>Welcome to the blocky void! Explore, build, and survive in the world of Minecraft.</marquee>
 
-  <!-- How to Play -->
-  <div class="content-box">
-    <h2>How to Play Minecraft</h2>
-    <p>
-      Minecraft offers several game modes, but the most popular is Survival mode. Here are the basics to get started:
-    </p>
-    <ul>
-      <li>Begin by gathering wood from trees by punching them.</li>
-      <li>Open your inventory (press <b>E</b>) to craft wooden planks, sticks, and a crafting table.</li>
-      <li>Build a shelter before nightfall to protect yourself from hostile mobs.</li>
-      <li>Mine stone and coal to craft better tools and torches for light.</li>
-      <li>Explore the world, collect resources, and upgrade your gear to survive and thrive.</li>
-      <li>Use <b>WASD</b> keys to move, mouse to look around, left-click to attack or mine, and right-click to place blocks or use items.</li>
-    </ul>
-  </div>
+    <!-- Stickers -->
+    <div class="content-box" style="text-align:center;">
+        <h2>Featured Stickers</h2>
+        <div class="sticker-collection">
+            <img src="https://media.giphy.com/media/Nx4C51UKPqEpsYDz58/giphy.gif" class="pixel-sticker" alt="Sticker 1" />
+            <img src="https://media.giphy.com/media/9rjIqptcvei1XesMjM/giphy.gif" class="pixel-sticker" alt="Sticker 2" />
+            <img src="https://media.giphy.com/media/FoSWIVqRYWPEFftuVG/giphy.gif" class="pixel-sticker" alt="Sticker 3" />
+            <img src="https://media.giphy.com/media/wNXPiMSaE1cidZzZPM/giphy.gif" class="pixel-sticker" alt="Sticker 4" />
+            <img src="https://media.giphy.com/media/3og0IEIcBeypT4DbyM/giphy.gif" class="pixel-sticker" alt="Sticker 5" />
+            <img src="https://media.tenor.com/dQ6u8owuWS7AAAAAC/pixel-art.gif" class="pixel-sticker" alt="Sticker 6" />
+            <img src="https://media.tenor.com/lnCwYVpsyBGAAAAAC/pixel-art.gif" class="pixel-sticker" alt="Sticker 7" />
+        </div>
+    </div>
 
-  <!-- Tips -->
-  <div class="content-box">
-    <h2>Helpful Tips for Beginners</h2>
-    <ul>
-      <li>Carry a water bucket to save yourself from falls or lava.</li>
-      <li>Strip mine at Y-level -59 to maximize your chances of finding diamonds.</li>
-      <li>Trade with villagers to obtain valuable enchanted items.</li>
-      <li>Place plenty of torches to prevent hostile mobs from spawning near you.</li>
-      <li>Sleep in a bed to skip the night and reset your spawn point.</li>
-      <li>Always keep spare tools and food in a chest near your base.</li>
-      <li>Avoid digging straight down to prevent falling into caves or lava.</li>
-    </ul>
-  </div>
+    <!-- Minecraft Story -->
+    <div class="content-box">
+        <h2>The Story of Minecraft</h2>
+        <p>
+            Minecraft was created by Markus "Notch" Persson and first released in 2009 as an independent project. It quickly gained popularity for its unique sandbox gameplay, allowing players to explore, build, and survive in a procedurally generated world made of blocks. Over time, the game evolved with new features, biomes, and dimensions such as the Nether and The End. In 2014, Mojang, the company behind Minecraft, was acquired by Microsoft for $2.5 billion. Today, Minecraft remains one of the best-selling video games worldwide, inspiring creativity and community across all ages.
+        </p>
+    </div>
 
-  <!-- Webring -->
-  <div class="webring">
-    <h2>Join the Webring</h2>
-    <p><a href="#">Previous</a> | <a href="#">Random</a> | <a href="#">Next</a></p>
-  </div>
+    <!-- How to Play -->
+    <div class="content-box">
+        <h2>How to Play Minecraft</h2>
+        <p>
+            Minecraft offers several game modes, but the most popular is Survival mode. Here are the basics to get started:
+        </p>
+        <ul>
+            <li>Begin by gathering wood from trees by punching them.</li>
+            <li>Open your inventory (press <b>E</b>) to craft wooden planks, sticks, and a crafting table.</li>
+            <li>Build a shelter before nightfall to protect yourself from hostile mobs.</li>
+            <li>Mine stone and coal to craft better tools and torches for light.</li>
+            <li>Explore the world, collect resources, and upgrade your gear to survive and thrive.</li>
+            <li>Use <b>WASD</b> keys to move, mouse to look around, left-click to attack or mine, and right-click to place blocks or use items.</li>
+        </ul>
+    </div>
+
+    <!-- Tips -->
+    <div class="content-box">
+        <h2>Helpful Tips for Beginners</h2>
+        <ul>
+            <li>Carry a water bucket to save yourself from falls or lava.</li>
+            <li>Strip mine at Y-level -59 to maximize your chances of finding diamonds.</li>
+            <li>Trade with villagers to obtain valuable enchanted items.</li>
+            <li>Place plenty of torches to prevent hostile mobs from spawning near you.</li>
+            <li>Sleep in a bed to skip the night and reset your spawn point.</li>
+            <li>Always keep spare tools and food in a chest near your base.</li>
+            <li>Avoid digging straight down to prevent falling into caves or lava.</li>
+        </ul>
+    </div>
+
+    <!-- Webring -->
+    <div class="webring">
+        <h2>Join the Webring</h2>
+        <p><a href="#">Previous</a> | <a href="#">Random</a> | <a href="#">Next</a></p>
+    </div>
 </body>
 </html>
