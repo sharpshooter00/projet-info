@@ -1,92 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Retro Space Page 🌌</title>
+  <meta charset="UTF-8" />
+  <title>MINECRAFT ALT ZONE</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
   <style>
     body {
-      background-color: black;
-      color: lime;
-      font-family: "Courier New", monospace;
-      background-image: url('https://i.imgur.com/dYcYQ7E.gif'); /* Tiled stars */
-      background-repeat: repeat;
-      background-attachment: fixed;
-      background-size: auto;
+      background: #000 url('https://media.giphy.com/media/cDYIcVbwRljoFz4sZP/giphy.gif') repeat;
+      background-size: 200px;
+      color: #55FF55;
+      font-family: 'VT323', monospace;
+      text-align: center;
       margin: 0;
       padding: 20px;
+      cursor: auto;
     }
-
     h1, h2 {
-      color: cyan;
-      text-shadow: 0 0 5px #0ff;
+      text-shadow: 3px 3px #FF00FF;
+      font-size: 40px;
     }
-
-    .box {
-      background-color: rgba(0, 0, 0, 0.75);
-      border: 2px solid #0ff;
+    .blink {
+      animation: blink 0.8s step-end infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    .content-box {
+      border: 3px double #FF00FF;
+      background: #111;
       padding: 15px;
       margin: 20px auto;
       max-width: 600px;
+      box-shadow: 5px 5px #55FF55;
+      text-align: left;
     }
-
+    .sticker-collection {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 15px 0;
+      flex-wrap: wrap;
+    }
+    .pixel-sticker {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      image-rendering: pixelated;
+      border: 2px solid #FF00FF;
+      background: #000;
+      padding: 2px;
+    }
+    .webring {
+      border: 3px dashed #55FF55;
+      padding: 10px;
+      margin: 20px auto;
+      width: 260px;
+      text-align: center;
+    }
     a {
-      color: #0ff;
-      text-decoration: underline;
+      color: #FF69B4;
+      text-decoration: underline wavy;
     }
-
+    marquee {
+      color: #FFFF00;
+      font-size: 20px;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(transparent 0 2px, rgba(0,0,0,0.2) 2px 4px);
+      pointer-events: none;
+      z-index: 9999;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .music-player {
+      margin: 20px auto;
+      text-align: center;
+    }
     iframe {
       border: none;
-      margin-top: 10px;
+      border-radius: 12px;
       width: 100%;
+      max-width: 300px;
       height: 80px;
-    }
-
-    .blinker {
-      animation: blink 1s step-start infinite;
-    }
-
-    @keyframes blink {
-      50% { opacity: 0; }
     }
   </style>
 </head>
 <body>
-
-  <div class="box">
-    <h1>✦ Welcome to My Retro Page ✦</h1>
-    <p><span class="blinker">★</span> Just me, the void, and my music.</p>
+  <!-- Login Screen -->
+  <div id="login" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10000;">
+    <h2 class="blink">MINECRAFT ALT ZONE</h2>
+    <input type="text" placeholder="Username" style="background: #111; color: #55FF55; border: 1px solid #FF00FF; padding: 5px; margin: 5px; font-family: 'VT323'; width: 150px;" />
+    <input type="password" placeholder="Password" style="background: #111; color: #55FF55; border: 1px solid #FF00FF; padding: 5px; margin: 5px; font-family: 'VT323'; width: 150px;" />
+    <button onclick="document.getElementById('login').style.display='none'" style="background: #111; color: #FF69B4; border: 1px solid #FF00FF; padding: 5px; font-family: 'VT323'; cursor: pointer;">Log In</button>
   </div>
 
-  <div class="box">
-    <h2>🎵 Currently Vibing To:</h2>
-    
-    <!-- First Spotify embed -->
-    <iframe style="border-radius:12px" 
-        src="https://open.spotify.com/embed/track/4K0odcECsBvgzv9Lr9z4kd?utm_source=generator" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-        loading="lazy"></iframe>
+  <!-- Main Title -->
+  <h1 class="blink">MINECRAFT // ALT ZONE</h1>
+  <marquee>Welcome to the blocky void! Explore, build, and survive in the world of Minecraft.</marquee>
 
-    <!-- Second Spotify embed -->
-    <iframe style="border-radius:12px" 
-        src="https://open.spotify.com/embed/track/6xwhCiWXREsAIQVZqHswVw?utm_source=generator" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-        loading="lazy"></iframe>
+  <!-- Music Player -->
+  <div class="music-player">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4K0odcECsBvgzv9Lr9z4kd?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <br><br>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6xwhCiWXREsAIQVZqHswVw?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
 
-  <div class="box">
-    <h2>🛰️ About Me</h2>
-    <p>Age: timeless<br>
-    Mood: floating in cosmic sadness<br>
-    Status: listening to songs that make me feel like a misunderstood alien</p>
+  <!-- Stickers -->
+  <div class="content-box" style="text-align:center;">
+    <h2>Featured Stickers</h2>
+    <div class="sticker-collection">
+      <img src="https://media.giphy.com/media/Nx4C51UKPqEpsYDz58/giphy.gif" class="pixel-sticker" alt="Minecraft Pig" />
+      <img src="https://media.giphy.com/media/9rjIqptcvei1XesMjM/giphy.gif" class="pixel-sticker" alt="Creeper" />
+      <img src="https://media.giphy.com/media/FoSWIVqRYWPEFftuVG/giphy.gif" class="pixel-sticker" alt="Diamond" />
+      <img src="https://media.giphy.com/media/wNXPiMSaE1cidZzZPM/giphy.gif" class="pixel-sticker" alt="Heart" />
+      <img src="https://media.giphy.com/media/3og0IEIcBeypT4DbyM/giphy.gif" class="pixel-sticker" alt="Steve Dance" />
+      <img src="https://media.tenor.com/dQ6u8owuWS7AAAAAC/pixel-art.gif" class="pixel-sticker" alt="Pixel Ghost" />
+      <img src="https://media.tenor.com/lnCwYVpsyBGAAAAAC/pixel-art.gif" class="pixel-sticker" alt="Pixel Sticker" />
+    </div>
   </div>
 
-  <div class="box">
-    <h2>🚀 Links</h2>
+  <!-- Story -->
+  <div class="content-box">
+    <h2>The Story of Minecraft</h2>
+    <p>
+      Minecraft was created by Markus "Notch" Persson and first released in 2009. It quickly became iconic for its sandbox style and pixel look. After being acquired by Microsoft, it became one of the best-selling games ever. Players build, survive, and explore infinite blocky worlds.
+    </p>
+  </div>
+
+  <!-- How to Play -->
+  <div class="content-box">
+    <h2>How to Play Minecraft</h2>
     <ul>
-      <li><a href="https://spacehey.com/" target="_blank">My SpaceHey</a></li>
-      <li><a href="https://neocities.org/" target="_blank">My Neocities</a></li>
+      <li>Chop trees, punch dirt, survive your first night.</li>
+      <li>Craft a shelter, mine stone, avoid creepers!</li>
+      <li>Explore biomes, fight mobs, collect gear.</li>
+      <li>Use <b>WASD</b> to move, click to attack/build, and <b>E</b> for inventory.</li>
     </ul>
   </div>
 
+  <!-- Tips -->
+  <div class="content-box">
+    <h2>Tips for Beginners</h2>
+    <ul>
+      <li>Place torches to stop mobs from spawning.</li>
+      <li>Never dig straight down 😅</li>
+      <li>Always bring a water bucket!</li>
+      <li>Y -59 is best for diamonds.</li>
+    </ul>
+  </div>
+
+  <!-- Webring -->
+  <div class="webring">
+    <h2>Join the Webring</h2>
+    <p><a href="#">Previous</a> | <a href="#">Random</a> | <a href="#">Next</a></p>
+  </div>
 </body>
 </html>
