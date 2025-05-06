@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>MINECRAFT ALT ZONE</title>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
     <style>
         body {
             background: #000 url('https://i.imgur.com/nM9WwXh.png') repeat;
@@ -27,10 +27,11 @@
         .content-box {
             border: 3px double #FF00FF;
             background: #111;
-            padding: 10px;
+            padding: 15px;
             margin: 20px auto;
-            max-width: 500px;
+            max-width: 600px;
             box-shadow: 5px 5px #55FF55;
+            text-align: left;
         }
         .sticker-collection {
             display: flex;
@@ -50,7 +51,8 @@
             border: 3px dashed #55FF55;
             padding: 10px;
             margin: 20px auto;
-            width: 250px;
+            width: 260px;
+            text-align: center;
         }
         a {
             color: #FF69B4;
@@ -71,21 +73,8 @@
             pointer-events: none;
             z-index: 9999;
         }
-        .ascii-art {
-            font-size: 12px;
-            color: #FF69B4;
-            line-height: 1;
-            white-space: pre;
-            margin-bottom: 10px;
-        }
-        .guestbook {
-            border: 2px dashed #FF00FF;
-            background: #222;
-            color: #FFFF00;
-            margin: 20px auto;
-            max-width: 400px;
-            padding: 10px;
-            font-size: 18px;
+        ul {
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -93,98 +82,76 @@
     <!-- Fake login screen -->
     <div id="login" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10000;">
         <h2 class="blink">MINECRAFT ALT ZONE</h2>
-        <input type="text" placeholder="ur name" style="background: #111; color: #55FF55; border: 1px solid #FF00FF; padding: 5px; margin: 5px; font-family: 'VT323'; width: 150px;">
-        <input type="password" placeholder="ur pass" style="background: #111; color: #55FF55; border: 1px solid #FF00FF; padding: 5px; margin: 5px; font-family: 'VT323'; width: 150px;">
-        <button onclick="document.getElementById('login').style.display='none'" style="background: #111; color: #FF69B4; border: 1px solid #FF00FF; padding: 5px; font-family: 'VT323';">LOG IN!!</button>
+        <input type="text" placeholder="Username" style="background: #111; color: #55FF55; border: 1px solid #FF00FF; padding: 5px; margin: 5px; font-family: 'VT323'; width: 150px;" />
+        <input type="password" placeholder="Password" style="background: #111; color: #55FF55; border: 1px solid #FF00FF; padding: 5px; margin: 5px; font-family: 'VT323'; width: 150px;" />
+        <button onclick="document.getElementById('login').style.display='none'" style="background: #111; color: #FF69B4; border: 1px solid #FF00FF; padding: 5px; font-family: 'VT323'; cursor: pointer;">Log In</button>
     </div>
 
     <!-- Main content -->
     <h1 class="blink">MINECRAFT // ALT ZONE</h1>
-    <marquee>YO WELCOME 2 THE BLOCKY VOID!!! *~* GET LOST IN THE PIXELS *~*</marquee>
-
-    <div class="ascii-art">
-        {\\__/}<br>
-        ( • . •) <br>
-        / >🟩 <br>
-        <span style="color:#55FF55">CREEPER BUNNY SAYS HI</span>
-    </div>
+    <marquee>Welcome to the blocky void! Explore, build, and survive in the world of Minecraft.</marquee>
 
     <!-- Stickers -->
-    <div class="content-box">
-        <h2>~ RAD STICKERS ~</h2>
+    <div class="content-box" style="text-align:center;">
+        <h2>Featured Stickers</h2>
         <div class="sticker-collection">
-            <img src="https://media.giphy.com/media/3o6Ztaf9qG3kY0X8Z6/giphy.gif" class="pixel-sticker" alt="creeper">
-            <img src="https://media.giphy.com/media/5z3d1q1ZQ2xgY/giphy.gif" class="pixel-sticker" alt="heart">
-            <img src="https://media.giphy.com/media/7z3Yx8f9qG3kY0X8Z6/giphy.gif" class="pixel-sticker" alt="pickaxe">
-            <img src="https://media.giphy.com/media/4z3Yx8f9qG3kY0X8Z6/giphy.gif" class="pixel-sticker" alt="zombie">
-            <img src="https://i.imgur.com/4NYqJQO.gif" class="pixel-sticker" alt="under construction">
+            <img src="https://media.giphy.com/media/3o6Ztaf9qG3kY0X8Z6/giphy.gif" class="pixel-sticker" alt="Creeper" />
+            <img src="https://media.giphy.com/media/5z3d1q1ZQ2xgY/giphy.gif" class="pixel-sticker" alt="Pixel Heart" />
+            <img src="https://media.giphy.com/media/7z3Yx8f9qG3kY0X8Z6/giphy.gif" class="pixel-sticker" alt="Diamond Pickaxe" />
+            <img src="https://media.giphy.com/media/4z3Yx8f9qG3kY0X8Z6/giphy.gif" class="pixel-sticker" alt="Zombie" />
         </div>
     </div>
 
     <!-- Minecraft Story -->
     <div class="content-box">
-        <h2 class="blink">THE MINECRAFT SAGA</h2>
+        <h2>The Story of Minecraft</h2>
         <p>
-            once upon a block...<br>
-            in 2009, notch coded a world where u could punch trees, run from creepers, and build whatever ur brain could imagine.<br>
-            <b>minecraft</b> blew up, went viral, and became the ultimate pixel sandbox.<br>
-            in 2011: full release. in 2014: mojang sold it to microsoft for 2.5 BILLION!<br>
-            now? it’s more than a game-it’s a vibe, a meme, a way of life.<br>
-            every block tells a story. every player’s got a legend.<br>
-            <span style="color:#FFFF00;">will u be the next?</span>
+            Minecraft was created by Markus "Notch" Persson and first released in 2009 as an independent project. It quickly gained popularity for its unique sandbox gameplay, allowing players to explore, build, and survive in a procedurally generated world made of blocks. Over time, the game evolved with new features, biomes, and dimensions such as the Nether and The End. In 2014, Mojang, the company behind Minecraft, was acquired by Microsoft for $2.5 billion. Today, Minecraft remains one of the best-selling video games worldwide, inspiring creativity and community across all ages.
         </p>
     </div>
 
     <!-- How to Play -->
     <div class="content-box">
-        <h2>HOW 2 PLAY</h2>
-        <p>new here? no sweat. here’s the basics:</p>
-        <ul style="text-align: left; margin: 0 auto; max-width: 400px;">
-            <li>punch a tree. get wood. (classic move)</li>
-            <li>open inventory (E), craft planks, sticks, crafting table.</li>
-            <li>before night? build a dirt hut or dig a hole. monsters = pain.</li>
-            <li>mine stone, coal, iron. upgrade ur swag.</li>
-            <li>explore, build, survive. there’s no wrong way!</li>
+        <h2>How to Play Minecraft</h2>
+        <p>
+            Minecraft offers several game modes, but the most popular is Survival mode. Here are the basics to get started:
+        </p>
+        <ul>
+            <li>Begin by gathering wood from trees by punching them.</li>
+            <li>Open your inventory (press <b>E</b>) to craft wooden planks, sticks, and a crafting table.</li>
+            <li>Build a shelter before nightfall to protect yourself from hostile mobs.</li>
+            <li>Mine stone and coal to craft better tools and torches for light.</li>
+            <li>Explore the world, collect resources, and upgrade your gear to survive and thrive.</li>
+            <li>Use <b>WASD</b> keys to move, mouse to look around, left-click to attack or mine, and right-click to place blocks or use items.</li>
         </ul>
     </div>
 
     <!-- Tips -->
     <div class="content-box">
-        <h2>PRO TIPS</h2>
-        <ul style="text-align: left; margin: 0 auto; max-width: 400px;">
-            <li>water bucket = clutch. saves u from lava & falls.</li>
-            <li>strip mine at Y=-59 for diamonds. trust.</li>
-            <li>trap villagers, trade for enchanted books. profit.</li>
-            <li>torch spam = no mobs. keep it lit.</li>
-            <li>sleep in a bed to skip night. or fight the phantoms. ur call.</li>
-            <li>keep a chest near spawn for backup loot.</li>
-            <li>don’t dig straight down. (unless u wanna YOLO)</li>
+        <h2>Helpful Tips for Beginners</h2>
+        <ul>
+            <li>Carry a water bucket to save yourself from falls or lava.</li>
+            <li>Strip mine at Y-level -59 to maximize your chances of finding diamonds.</li>
+            <li>Trade with villagers to obtain valuable enchanted items.</li>
+            <li>Place plenty of torches to prevent hostile mobs from spawning near you.</li>
+            <li>Sleep in a bed to skip the night and reset your spawn point.</li>
+            <li>Always keep spare tools and food in a chest near your base.</li>
+            <li>Avoid digging straight down to prevent falling into caves or lava.</li>
         </ul>
     </div>
 
     <!-- Webring -->
     <div class="webring">
-        <h2>JOIN THE RING</h2>
-        <img src="https://i.imgur.com/4NYqJQO.gif" alt="construction" class="pixel-sticker">
-        <p><a href="#">prev</a> | <a href="#">rand</a> | <a href="#">next</a></p>
+        <h2>Join the Webring</h2>
+        <img src="https://i.imgur.com/4NYqJQO.gif" alt="Under Construction" class="pixel-sticker" />
+        <p><a href="#">Previous</a> | <a href="#">Random</a> | <a href="#">Next</a></p>
     </div>
 
-    <!-- Guestbook -->
-    <div class="guestbook">
-        <b>GUESTBOOK:</b><br>
-        <i>leave ur mark! (fake, but retro af)</i><br>
-        <hr style="border:1px dashed #FF00FF;">
-        <b>Steve</b>: cool site lol<br>
-        <b>Alex</b>: i punched a tree and survived<br>
-        <b>Herobrine</b>: 👀
-    </div>
-
-    <!-- Bottom chaos -->
-    <div style="margin: 20px 0;">
-        <img src="https://i.imgur.com/3JQZaXG.png" width="30" style="image-rendering: pixelated;">
-        <img src="https://media.giphy.com/media/3o6Ztaf9qG3kY0X8Z6/giphy.gif" width="30" style="image-rendering: pixelated;">
-        <img src="https://media.giphy.com/media/5z3d1q1ZQ2xgY/giphy.gif" width="30" style="image-rendering: pixelated;">
-        <img src="https://i.imgur.com/4NYqJQO.gif" width="30" style="image-rendering: pixelated;">
+    <!-- Footer icons -->
+    <div style="margin: 20px 0; text-align: center;">
+        <img src="https://i.imgur.com/3JQZaXG.png" width="30" style="image-rendering: pixelated;" alt="Cursor Icon" />
+        <img src="https://media.giphy.com/media/3o6Ztaf9qG3kY0X8Z6/giphy.gif" width="30" style="image-rendering: pixelated;" alt="Creeper" />
+        <img src="https://media.giphy.com/media/5z3d1q1ZQ2xgY/giphy.gif" width="30" style="image-rendering: pixelated;" alt="Pixel Heart" />
     </div>
 </body>
 </html>
