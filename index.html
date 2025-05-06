@@ -2,24 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Minecraft Fan Page</title>
+  <title>Minecraft Shrine 🌌</title>
   <style>
     body {
-      background-color: #1a1a1a;
+      background-color: #000;
+      background-image: url('https://i.imgur.com/hjZ5x1W.gif'); /* Starfield bg */
       color: #00ffcc;
-      font-family: "Courier New", monospace;
-      background-image: url('https://i.imgur.com/zvWTUVu.png'); /* pixel bg */
+      font-family: "Press Start 2P", monospace;
       background-size: cover;
       background-repeat: repeat;
+      cursor: url('https://cur.cursors-4u.net/games/gam-10/gam997.cur'), auto;
     }
 
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     .container {
-      width: 90%;
       max-width: 900px;
       margin: auto;
       padding: 20px;
       background: rgba(0, 0, 0, 0.8);
-      border: 2px dashed #00ffcc;
+      border: 3px dashed #39ff14;
+      box-shadow: 0 0 20px #39ff14;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #39ff14;
+      text-shadow: 2px 2px #ff00ff;
+    }
+
+    .section {
+      margin: 20px 0;
     }
 
     img.sticker {
@@ -27,80 +40,65 @@
       height: 100px;
       object-fit: contain;
       image-rendering: pixelated;
+      margin: 5px;
     }
 
-    img.broken {
-      display: none; /* hides broken images */
+    iframe {
+      display: block;
+      margin: 10px auto;
+      border-radius: 12px;
     }
 
-    h1, h2 {
-      text-align: center;
-      font-family: 'Lucida Console', monospace;
-      text-shadow: 2px 2px #009999;
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
     }
 
-    .music-player {
-      margin: 20px auto;
-      display: flex;
-      justify-content: center;
+    .glitter {
+      animation: glitter 1.5s infinite alternate;
     }
 
-    .section {
-      margin-bottom: 30px;
+    @keyframes glitter {
+      from { filter: brightness(1); }
+      to { filter: brightness(1.5); }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>🟩 Minecraft Fan Page 💚</h1>
+    <h1 class="glitter">🌠 MINECRAFT SHRINE 🟩</h1>
 
-    <div class="music-player">
-      <iframe style="border-radius:12px" 
-              src="https://open.spotify.com/embed/track/4K0odcECsBvgzv9Lr9z4kd?utm_source=generator" 
-              width="300" 
-              height="80" 
-              frameborder="0" 
-              allowtransparency="true" 
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-              loading="lazy"></iframe>
-    </div>
+    <!-- Music embeds -->
+    <iframe src="https://open.spotify.com/embed/track/4K0odcECsBvgzv9Lr9z4kd?utm_source=generator" width="300" height="80" frameborder="0" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe src="https://open.spotify.com/embed/track/6xwhCiWXREsAIQVZqHswVw?utm_source=generator" width="300" height="80" frameborder="0" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-    <div class="music-player">
-      <iframe style="border-radius:12px" 
-              src="https://open.spotify.com/embed/track/6xwhCiWXREsAIQVZqHswVw?utm_source=generator" 
-              width="300" 
-              height="80" 
-              frameborder="0" 
-              allowtransparency="true" 
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-              loading="lazy"></iframe>
-    </div>
-
+    <!-- Story -->
     <div class="section">
-      <h2>🌍 Welcome to the Block World</h2>
-      <p>Here you'll find Minecraft stories, survival tips, and secrets no one's told you yet. 😎</p>
+      <h2>📖 The Story of Minecraft</h2>
+      <p>In 2009, a Swedish programmer named Markus "Notch" Persson released a blocky game prototype. It started as a passion project, but it sparked a revolution. Players could build, destroy, explore, and survive in a limitless pixel world.</p>
+      <p>From humble caves to massive cities, Minecraft became more than a game — it became a *sandbox for imagination*. Now owned by Microsoft, it's one of the best-selling games ever. But real ones know: the magic began in **Alpha**. 💚</p>
     </div>
 
+    <!-- Tips -->
     <div class="section">
-      <h2>📜 How to Play Minecraft</h2>
+      <h2>💡 Tips for Survival Mode</h2>
       <ul>
-        <li>Break wood</li>
-        <li>Craft tools</li>
-        <li>Build a shelter before night</li>
-        <li>Mine deep to find diamonds 💎</li>
+        <li>🌑 Build a shelter before your first night!</li>
+        <li>🪓 Use wood tools early, but get stone ASAP.</li>
+        <li>⛏️ Dig at Y=11 to find diamonds (but don’t dig straight down!)</li>
+        <li>🌿 Use beds to skip night & avoid phantoms.</li>
       </ul>
     </div>
 
-    <div class="section">
-      <h2>🔥 Tips & Tricks</h2>
-      <p>Never dig straight down. Unless you're *brave* or got a water bucket. 😈</p>
-    </div>
-
     <!-- Stickers -->
-    <img class="sticker" src="https://i.imgur.com/YZxv9RI.png" alt="Creeper sticker">
-    <img class="sticker" src=i.imgur.com/JPh5W4k.png" alt="Diamond sticker">
-    <img class="sticker" src="https://i.imgur.com/LBIn1G1.png" alt="Steve sticker">
-    <img class="broken" src="https://broken.image.url.com/image.png" alt="Broken image hidden">
+    <div class="section">
+      <h2>🖼️ Stickers</h2>
+      <img class="sticker" src="https://i.imgur.com/N8f0hql.png" alt="Steve sticker">
+      <img class="sticker" src="https://i.imgur.com/LBIn1G1.png" alt="Creeper pixel">
+      <img class="sticker" src="https://i.imgur.com/IkUnzC5.png" alt="Diamond sword">
+      <img class="sticker" src="https://i.imgur.com/c8hPRLM.png" alt="Redstone">
+      <img class="sticker" src="https://i.imgur.com/VhR8RUf.gif" alt="Pixel torch">
+    </div>
   </div>
 </body>
 </html>
