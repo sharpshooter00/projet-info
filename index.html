@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -42,8 +42,7 @@
         }
         .pixel-sticker {
             width: 60px;
-            height: 60px;
-            object-fit: contain;
+            image-rendering: pixelated;
             border: 2px solid #FF00FF;
             background: #000;
             padding: 2px;
@@ -77,10 +76,6 @@
         ul {
             padding-left: 20px;
         }
-        .spotify-player {
-            margin: 20px auto;
-            max-width: 300px;
-        }
     </style>
 </head>
 <body>
@@ -92,77 +87,66 @@
         <button onclick="document.getElementById('login').style.display='none'" style="background: #111; color: #FF69B4; border: 1px solid #FF00FF; padding: 5px; font-family: 'VT323'; cursor: pointer;">Log In</button>
     </div>
 
-```
-<!-- Main content -->
-<h1 class="blink">MINECRAFT // ALT ZONE</h1>
-<marquee>Welcome to the blocky void! Explore, build, and survive in the world of Minecraft.</marquee>
+    <!-- Main content -->
+    <h1 class="blink">MINECRAFT // ALT ZONE</h1>
+    <marquee>Welcome to the blocky void! Explore, build, and survive in the world of Minecraft.</marquee>
 
-<!-- Stickers -->
-<div class="content-box" style="text-align:center;">
-    <h2>Featured Stickers</h2>
-    <div class="sticker-collection">
-        <img src="https://media.giphy.com/media/Nx4C51UKPqEpsYDz58/giphy.gif" class="pixel-sticker" alt="Sticker 1" />
-        <img src="https://media.giphy.com/media/9rjIqptcvei1XesMjM/giphy.gif" class="pixel-sticker" alt="Sticker 2" />
-        <img src="https://media.giphy.com/media/FoSWIVqRYWPEFftuVG/giphy.gif" class="pixel-sticker" alt="Sticker 3" />
-        <img src="https://media.giphy.com/media/wNXPiMSaE1cidZzZPM/giphy.gif" class="pixel-sticker" alt="Sticker 4" />
-        <img src="https://media.giphy.com/media/3og0IEIcBeypT4DbyM/giphy.gif" class="pixel-sticker" alt="Sticker 5" />
-        <img src="https://media.tenor.com/dQ6u8owuWS7AAAAAC/pixel-art.gif" class="pixel-sticker" alt="Sticker 6" />
-        <img src="https://media.tenor.com/lnCwYVpsyBGAAAAAC/pixel-art.gif" class="pixel-sticker" alt="Sticker 7" />
-        <!-- New stickers -->
-        <img src="https://media.giphy.com/media/ySztQh36Iptg2F74ft/giphy.gif?cid=ecf05e47w85b61a3h01zgpy0b1hu2hxe51x4pvxxrxdprhdg&ep=v1_stickers_search&rid=giphy.gif&ct=s" class="pixel-sticker" alt="Sticker 8" />
-        <img src="https://media.giphy.com/media/0VlCmTziJyHsO9RIL4/giphy.gif?cid=ecf05e47sfkoxpiirtxk2kb1g8s6g56czkmfo0lbfpqa4luy&ep=v1_stickers_search&rid=giphy.gif&ct=s" class="pixel-sticker" alt="Sticker 9" />
+    <!-- Stickers -->
+    <div class="content-box" style="text-align:center;">
+        <h2>Featured Stickers</h2>
+        <div class="sticker-collection">
+            <img src="https://media.giphy.com/media/Nx4C51UKPqEpsYDz58/giphy.gif" class="pixel-sticker" alt="Sticker 1" />
+            <img src="https://media.giphy.com/media/9rjIqptcvei1XesMjM/giphy.gif" class="pixel-sticker" alt="Sticker 2" />
+            <img src="https://media.giphy.com/media/FoSWIVqRYWPEFftuVG/giphy.gif" class="pixel-sticker" alt="Sticker 3" />
+            <img src="https://media.giphy.com/media/wNXPiMSaE1cidZzZPM/giphy.gif" class="pixel-sticker" alt="Sticker 4" />
+            <img src="https://media.giphy.com/media/3og0IEIcBeypT4DbyM/giphy.gif" class="pixel-sticker" alt="Sticker 5" />
+            <img src="https://media.tenor.com/dQ6u8owuWS7AAAAAC/pixel-art.gif" class="pixel-sticker" alt="Sticker 6" />
+            <img src="https://media.tenor.com/lnCwYVpsyBGAAAAAC/pixel-art.gif" class="pixel-sticker" alt="Sticker 7" />
+        </div>
     </div>
-</div>
 
-<!-- Spotify Tracks -->
-<div class="content-box">
-    <h2>Listen to Minecraft Music</h2>
-    <!-- Song 1 -->
-    <div class="spotify-player">
-        <iframe src="https://open.spotify.com/embed/track/4K0odcECsBvgzv9Lr9z4kd?si=d77a70c3cd7c48ec" width="300" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <!-- Minecraft Story -->
+    <div class="content-box">
+        <h2>The Story of Minecraft</h2>
+        <p>
+            Minecraft was created by Markus "Notch" Persson and first released in 2009 as an independent project. It quickly gained popularity for its unique sandbox gameplay, allowing players to explore, build, and survive in a procedurally generated world made of blocks. Over time, the game evolved with new features, biomes, and dimensions such as the Nether and The End. In 2014, Mojang, the company behind Minecraft, was acquired by Microsoft for $2.5 billion. Today, Minecraft remains one of the best-selling video games worldwide, inspiring creativity and community across all ages.
+        </p>
     </div>
-    <!-- Song 2 -->
-    <div class="spotify-player">
-        <iframe src="https://open.spotify.com/embed/track/6xwhCiWXREsAIQVZqHswVw?si=b4b580bd38634a0c" width="300" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    </div>
-</div>
 
-<!-- Minecraft Story -->
-<div class="content-box">
-    <h2>The Story of Minecraft</h2>
-    <p>
-        Minecraft was created by Markus "Notch" Persson and first released in 2009 as an independent project. It quickly gained popularity for its unique sandbox gameplay, allowing players to explore, build, and survive in a procedurally generated world made of blocks. Over time, the game evolved with new features, biomes, and dimensions such as the Nether and The End. In 2014, Mojang, the company behind Minecraft, was acquired by Microsoft for $2.5 billion. Today, Minecraft remains one of the best-selling video games worldwide, inspiring creativity and community across all ages.
-    </p>
-</div>
-
-<!-- How to Play -->
-<div class="content-box">
-    <h2>How to Play Minecraft</h2>
-    <p>
-        Minecraft offers several game modes, but the most popular is Survival mode. Here are the basics to get started:
-    </p>
-    <ul>
-        <li>Begin by gathering wood from trees by punching them.</li>
-        <li>Open your inventory (press <b>E</b>) to craft wooden planks, sticks, and a crafting table.</li>
-        <li>Build a shelter before nightfall to protect yourself from hostile mobs.</li>
-        <li>Craft basic tools like a wooden pickaxe and start mining stone.</li>
-            <li>Explore caves to find valuable resources like coal, iron, and eventually diamonds.</li>
-            <li>Cook food, craft armor, and prepare to explore other dimensions like the Nether and the End.</li>
+    <!-- How to Play -->
+    <div class="content-box">
+        <h2>How to Play Minecraft</h2>
+        <p>
+            Minecraft offers several game modes, but the most popular is Survival mode. Here are the basics to get started:
+        </p>
+        <ul>
+            <li>Begin by gathering wood from trees by punching them.</li>
+            <li>Open your inventory (press <b>E</b>) to craft wooden planks, sticks, and a crafting table.</li>
+            <li>Build a shelter before nightfall to protect yourself from hostile mobs.</li>
+            <li>Mine stone and coal to craft better tools and torches for light.</li>
+            <li>Explore the world, collect resources, and upgrade your gear to survive and thrive.</li>
+            <li>Use <b>WASD</b> keys to move, mouse to look around, left-click to attack or mine, and right-click to place blocks or use items.</li>
         </ul>
-        <p>
-            Whether you’re building a castle, redstone contraptions, or just vibing with your pets, Minecraft is all about creativity and survival.
-        </p>
     </div>
 
-    <!-- Webring section -->
+    <!-- Tips -->
+    <div class="content-box">
+        <h2>Helpful Tips for Beginners</h2>
+        <ul>
+            <li>Carry a water bucket to save yourself from falls or lava.</li>
+            <li>Strip mine at Y-level -59 to maximize your chances of finding diamonds.</li>
+            <li>Trade with villagers to obtain valuable enchanted items.</li>
+            <li>Place plenty of torches to prevent hostile mobs from spawning near you.</li>
+            <li>Sleep in a bed to skip the night and reset your spawn point.</li>
+            <li>Always keep spare tools and food in a chest near your base.</li>
+            <li>Avoid digging straight down to prevent falling into caves or lava.</li>
+        </ul>
+    </div>
+
+    <!-- Webring -->
     <div class="webring">
-        <p>You're in the <b>Minecraft Alt Webring</b>!</p>
-        <p>
-            <a href="#">&laquo; Previous</a> |
-            <a href="#">Random</a> |
-            <a href="#">Next &raquo;</a>
-        </p>
+        <h2>Join the Webring</h2>
+        <p><a href="#">Previous</a> | <a href="#">Random</a> | <a href="#">Next</a></p>
     </div>
-
 </body>
 </html>
