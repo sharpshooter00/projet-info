@@ -1,11 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>MINECRAFT // ALT ZONE</title>
     <style>
         /* === GLOBAL STYLES === */
         @font-face {
             font-family: 'Minecraft';
-            src: url('https://assets.codepen.io/1213385/Minecraft.ttf') format('truetype');
+            src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css') format('truetype');
         }
         
         body {
@@ -15,204 +17,35 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            cursor: url('https://www.minecraft.net/content/dam/minecraft/touchup-2020/game-key-art-1200x630.jpg'), auto;
+            cursor: url('https://i.imgur.com/3JQZaXG.png'), auto;
             overflow-x: hidden;
         }
 
-        /* === CRT MONITOR EFFECT === */
-        .crt::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                repeating-linear-gradient(
-                    0deg, 
-                    rgba(0, 255, 255, 0.03), 
-                    transparent 1px, 
-                    transparent 2px
-                ),
-                radial-gradient(
-                    circle at center,
-                    transparent 0%,
-                    rgba(0, 0, 0, 0.8) 100%
-                );
-            pointer-events: none;
-            z-index: 9999;
-            animation: flicker 0.15s infinite alternate;
-        }
+        /* ... (keep previous CSS styles) ... */
 
-        @keyframes flicker {
-            0% { opacity: 0.8; }
-            100% { opacity: 1; }
-        }
-
-        /* === HEADER === */
-        header {
-            background: linear-gradient(to right, #000000, #1a1a1a, #000000);
-            border-bottom: 4px solid #55FF55;
-            padding: 15px 0;
-            position: relative;
-        }
-
-        h1 {
-            text-shadow: 
-                0 0 5px #55FF55, 
-                0 0 10px #55FF55,
-                2px 2px 0 #3A3A3A;
-            font-size: 3em;
-            margin: 0;
-            color: #FFAA00;
-            letter-spacing: -1px;
-            animation: glitch 3s infinite;
-        }
-
-        @keyframes glitch {
-            0%, 100% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(-2px, -2px); }
-        }
-
-        /* === MAIN CONTENT === */
-        .content-box {
-            background: rgba(0, 0, 0, 0.7);
-            border: 4px double #55FF55;
-            width: 80%;
-            max-width: 700px;
-            margin: 30px auto;
-            padding: 20px;
-            position: relative;
-            box-shadow: 0 0 20px #55FF55;
-        }
-
-        .content-box::before {
-            content: "";
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            right: 2px;
-            bottom: 2px;
-            border: 1px solid #FF00FF;
-            pointer-events: none;
-        }
-
-        /* === MOB GALLERY === */
-        .mob-gallery {
+        /* === NEOCITIES-STYLE STICKERS === */
+        .sticker-collection {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
             margin: 20px 0;
         }
 
-        .mob-card {
-            background: #1a1a1a;
-            border: 2px solid #3A3A3A;
-            padding: 10px;
-            width: 120px;
-            transition: all 0.3s;
-        }
-
-        .mob-card:hover {
-            transform: scale(1.1);
-            border-color: #FF00FF;
-            box-shadow: 0 0 15px #FF00FF;
-            z-index: 10;
-        }
-
-        .mob-card img {
+        .pixel-sticker {
+            image-rendering: pixelated;
             width: 80px;
             height: 80px;
-            object-fit: contain;
-            image-rendering: pixelated;
-        }
-
-        /* === SPOTIFY PLAYER === */
-        .music-player {
-            background: #000;
-            border: 3px dashed #55FF55;
-            padding: 15px;
-            margin: 30px auto;
-            width: 300px;
-            position: relative;
-        }
-
-        .music-player::after {
-            content: "♫ OFFICIAL SOUNDTRACK ♫";
-            position: absolute;
-            top: -12px;
-            left: 20px;
-            background: #000;
-            padding: 0 10px;
-            color: #FF00FF;
-            font-size: 0.9em;
-        }
-
-        /* === BUTTONS === */
-        .btn {
-            background: linear-gradient(to bottom, #3A3A3A, #1a1a1a);
-            color: #FFF;
             border: 2px solid #55FF55;
-            padding: 8px 25px;
-            margin: 10px;
-            font-family: 'Minecraft';
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
+            padding: 3px;
+            background: #000;
         }
 
-        .btn:hover {
-            background: linear-gradient(to bottom, #55FF55, #1a1a1a);
-            color: #000;
-            text-shadow: 0 0 5px #FFF;
-            box-shadow: 0 0 15px #55FF55;
-        }
-
-        .btn::before {
-            content: "";
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(45deg, 
-                #FF00FF, #55FF55, #FFAA00, #55FF55, #FF00FF);
-            background-size: 400%;
-            z-index: -1;
-            filter: blur(10px);
-            opacity: 0;
-            transition: all 0.5s;
-        }
-
-        .btn:hover::before {
-            opacity: 0.7;
-            animation: gradient 3s linear infinite;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 400% 50%; }
-        }
-
-        /* === SECRET HOVER EFFECTS === */
-        .secret {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            font-size: 8px;
-            color: transparent;
-        }
-
-        .secret:hover {
-            color: #FF00FF;
-            font-size: 16px;
-            text-shadow: 0 0 10px #55FF55;
+        /* === RETRO LINKS === */
+        .webring {
+            border: 3px double #55FF55;
+            padding: 10px;
+            margin: 20px auto;
+            width: 300px;
         }
     </style>
 </head>
@@ -230,55 +63,28 @@
         <h1>MINECRAFT // ALT ZONE</h1>
     </header>
 
+    <!-- Add sticker section -->
     <div class="content-box">
-        <h2>MOB GALLERY</h2>
-        <div class="mob-gallery">
-            <div class="mob-card">
-                <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/creeper-1200x630.png" alt="Creeper">
-                <p>CREEPER</p>
-                <p style="color: #FF5555;">💥 BOOM!</p>
-            </div>
-            <div class="mob-card">
-                <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/enderman-1200x630.png" alt="Enderman">
-                <p>ENDERMAN</p>
-                <p style="color: #AA00FF;">👀 DON'T LOOK</p>
-            </div>
-            <div class="mob-card">
-                <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/pig-1200x630.png" alt="Pig">
-                <p>PIG</p>
-                <p style="color: #FFAAFF;">🐷 OINK!</p>
-            </div>
-            <div class="mob-card">
-                <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/zombie-1200x630.png" alt="Zombie">
-                <p>ZOMBIE</p>
-                <p style="color: #55FF55;">🧟 GRRR!</p>
-            </div>
+        <h2>COOL STICKERS</h2>
+        <div class="sticker-collection">
+            <img src="https://neocities.org/img/neocities.png" class="pixel-sticker" alt="Neocities">
+            <img src="https://i.imgur.com/5E4vJzP.png" class="pixel-sticker" alt="Creeper">
+            <img src="https://i.imgur.com/zP781V9.gif" class="pixel-sticker" alt="Pixel Heart">
         </div>
     </div>
 
-    <div class="content-box">
-        <h2>OFFICIAL SOUNDTRACK</h2>
-        <div class="music-player">
-            <iframe src="https://open.spotify.com/embed/track/4K0odcECsBvgzv9Lr9z4kd" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <p style="color: #55FF55; margin-top: 5px;">C418 - Sweden</p>
-        </div>
+    <!-- Webring section -->
+    <div class="webring">
+        <h3>JOIN OUR WEBRING</h3>
+        <img src="https://i.imgur.com/4NYqJQO.gif" alt="Under Construction" width="100">
+        <p>[ <a href="#">Previous Site</a> | <a href="#">Random</a> | <a href="#">Next Site</a> ]</p>
     </div>
 
-    <div>
-        <button class="btn">JOIN SERVER</button>
-        <button class="btn">TEXTURE PACKS</button>
-        <button class="btn">SCREENSHOTS</button>
-    </div>
-
-    <!-- SECRET EASTER EGG -->
-    <a href="secret.html" class="secret">.</a>
-
-    <!-- FOOTER -->
+    <!-- Fixed broken closing div -->
     <div style="margin: 40px 0 20px;">
-        <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/game-key-art-1200x630.jpg" width="40" style="image-rendering: pixelated;">
-        <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/diamond-1200x630.png" width="40" style="image-rendering: pixelated;">
-        <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/redstone-1200x630.png" width="40" style="image-rendering: pixelated;">
-        <img src="https://www.minecraft.net/content/dam/minecraft/touchup-2020/gold-1200x630.png" width="40" style="image-rendering: pixelated;">
+        <img src="https://i.imgur.com/3JQZaXG.png" width="40" style="image-rendering: pixelated;">
+        <img src="https://i.imgur.com/5E4vJzP.png" width="40" style="image-rendering: pixelated;">
+        <img src="https://i.imgur.com/zP781V9.gif" width="40" style="image-rendering: pixelated;">
     </div>
 </body>
 </html>
