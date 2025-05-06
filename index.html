@@ -1,157 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>MINECRAFT ALT ZONE</title>
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>Minecraft Fan Page</title>
   <style>
     body {
-      background: #000 url('https://media.giphy.com/media/cDYIcVbwRljoFz4sZP/giphy.gif') repeat;
-      background-size: 200px;
-      color: #55FF55;
-      font-family: 'VT323', monospace;
-      text-align: center;
-      margin: 0;
+      background-color: #1a1a1a;
+      color: #00ffcc;
+      font-family: "Courier New", monospace;
+      background-image: url('https://i.imgur.com/zvWTUVu.png'); /* pixel bg */
+      background-size: cover;
+      background-repeat: repeat;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
       padding: 20px;
-      cursor: auto;
+      background: rgba(0, 0, 0, 0.8);
+      border: 2px dashed #00ffcc;
     }
-    h1, h2 {
-      text-shadow: 3px 3px #FF00FF;
-      font-size: 40px;
-    }
-    .blink {
-      animation: blink 0.8s step-end infinite;
-    }
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-    .content-box {
-      border: 3px double #FF00FF;
-      background: #111;
-      padding: 15px;
-      margin: 20px auto;
-      max-width: 600px;
-      box-shadow: 5px 5px #55FF55;
-      text-align: left;
-    }
-    .sticker-collection {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 15px 0;
-      flex-wrap: wrap;
-    }
-    .pixel-sticker {
-      width: 60px;
-      height: 60px;
+
+    img.sticker {
+      width: 100px;
+      height: 100px;
       object-fit: contain;
       image-rendering: pixelated;
-      border: 2px solid #FF00FF;
-      background: #000;
-      padding: 2px;
     }
-    .webring {
-      border: 3px dashed #55FF55;
-      padding: 10px;
-      margin: 20px auto;
-      width: 260px;
+
+    img.broken {
+      display: none; /* hides broken images */
+    }
+
+    h1, h2 {
       text-align: center;
+      font-family: 'Lucida Console', monospace;
+      text-shadow: 2px 2px #009999;
     }
-    a {
-      color: #FF69B4;
-      text-decoration: underline wavy;
-    }
-    marquee {
-      color: #FFFF00;
-      font-size: 20px;
-    }
-    body::after {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: repeating-linear-gradient(transparent 0 2px, rgba(0,0,0,0.2) 2px 4px);
-      pointer-events: none;
-      z-index: 9999;
-    }
-    ul {
-      padding-left: 20px;
-    }
+
     .music-player {
       margin: 20px auto;
-      text-align: center;
+      display: flex;
+      justify-content: center;
     }
-    iframe {
-      border: none;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 300px;
-      height: 80px;
+
+    .section {
+      margin-bottom: 30px;
     }
   </style>
 </head>
 <body>
-  <div id="login" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10000;">
-    <h2 class="blink">MINECRAFT ALT ZONE</h2>
-    <input type="text" placeholder="Username" style="background: #111; color: #55FF55; border: 1px solid #FF00FF; padding: 5px; margin: 5px; font-family: 'VT323'; width: 150px;" />
-    <input type="password" placeholder="Password" style="background: #111; color: #55FF55; border: 1px solid #FF00FF; padding: 5px; margin: 5px; font-family: 'VT323'; width: 150px;" />
-    <button onclick="document.getElementById('login').style.display='none'" style="background: #111; color: #FF69B4; border: 1px solid #FF00FF; padding: 5px; font-family: 'VT323'; cursor: pointer;">Log In</button>
-  </div>
+  <div class="container">
+    <h1>🟩 Minecraft Fan Page 💚</h1>
 
-  <h1 class="blink">MINECRAFT // ALT ZONE</h1>
-  <marquee>Welcome to the blocky void! Explore, build, and survive in the world of Minecraft.</marquee>
-
-  <div class="music-player">
-    <iframe src="https://open.spotify.com/embed/track/4K0odcECsBvgzv9Lr9z4kd?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    <br><br>
-    <iframe src="https://open.spotify.com/embed/track/6xwhCiWXREsAIQVZqHswVw?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </div>
-
-  <div class="content-box" style="text-align:center;">
-    <h2>Featured Stickers</h2>
-    <div class="sticker-collection">
-      <img src="https://media.giphy.com/media/Nx4C51UKPqEpsYDz58/giphy.gif" class="pixel-sticker" alt="Minecraft Pig" />
-      <img src="https://media.giphy.com/media/9rjIqptcvei1XesMjM/giphy.gif" class="pixel-sticker" alt="Creeper" />
-      <img src="https://media.giphy.com/media/FoSWIVqRYWPEFftuVG/giphy.gif" class="pixel-sticker" alt="Diamond" />
-      <img src="https://media.giphy.com/media/wNXPiMSaE1cidZzZPM/giphy.gif" class="pixel-sticker" alt="Heart" />
-      <img src="https://media.giphy.com/media/3og0IEIcBeypT4DbyM/giphy.gif" class="pixel-sticker" alt="Steve Dance" />
-      <img src="https://media.tenor.com/dQ6u8owuWS7AAAAAC/pixel-art.gif" class="pixel-sticker" alt="Pixel Ghost" />
-      <img src="https://media.tenor.com/lnCwYVpsyBGAAAAAC/pixel-art.gif" class="pixel-sticker" alt="Pixel Sticker" />
+    <div class="music-player">
+      <iframe style="border-radius:12px" 
+              src="https://open.spotify.com/embed/track/4K0odcECsBvgzv9Lr9z4kd?utm_source=generator" 
+              width="300" 
+              height="80" 
+              frameborder="0" 
+              allowtransparency="true" 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+              loading="lazy"></iframe>
     </div>
-  </div>
 
-  <div class="content-box">
-    <h2>The Story of Minecraft</h2>
-    <p>
-      Minecraft was created by Markus "Notch" Persson and first released in 2009. It quickly became iconic for its sandbox style and pixel look. After being acquired by Microsoft, it became one of the best-selling games ever. Players build, survive, and explore infinite blocky worlds.
-    </p>
-  </div>
+    <div class="music-player">
+      <iframe style="border-radius:12px" 
+              src="https://open.spotify.com/embed/track/6xwhCiWXREsAIQVZqHswVw?utm_source=generator" 
+              width="300" 
+              height="80" 
+              frameborder="0" 
+              allowtransparency="true" 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+              loading="lazy"></iframe>
+    </div>
 
-  <div class="content-box">
-    <h2>How to Play Minecraft</h2>
-    <ul>
-      <li>Chop trees, punch dirt, survive your first night.</li>
-      <li>Craft a shelter, mine stone, avoid creepers!</li>
-      <li>Explore biomes, fight mobs, collect gear.</li>
-      <li>Use <b>WASD</b> to move, click to attack/build, and <b>E</b> for inventory.</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>🌍 Welcome to the Block World</h2>
+      <p>Here you'll find Minecraft stories, survival tips, and secrets no one's told you yet. 😎</p>
+    </div>
 
-  <div class="content-box">
-    <h2>Tips for Beginners</h2>
-    <ul>
-      <li>Place torches to stop mobs from spawning.</li>
-      <li>Never dig straight down 😅</li>
-      <li>Always bring a water bucket!</li>
-      <li>Y -59 is best for diamonds.</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>📜 How to Play Minecraft</h2>
+      <ul>
+        <li>Break wood</li>
+        <li>Craft tools</li>
+        <li>Build a shelter before night</li>
+        <li>Mine deep to find diamonds 💎</li>
+      </ul>
+    </div>
 
-  <div class="webring">
-    <h2>Join the Webring</h2>
-    <p><a href="#">Previous</a> | <a href="#">Random</a> | <a href="#">Next</a></p>
+    <div class="section">
+      <h2>🔥 Tips & Tricks</h2>
+      <p>Never dig straight down. Unless you're *brave* or got a water bucket. 😈</p>
+    </div>
+
+    <!-- Stickers -->
+    <img class="sticker" src="https://i.imgur.com/YZxv9RI.png" alt="Creeper sticker">
+    <img class="sticker" src=i.imgur.com/JPh5W4k.png" alt="Diamond sticker">
+    <img class="sticker" src="https://i.imgur.com/LBIn1G1.png" alt="Steve sticker">
+    <img class="broken" src="https://broken.image.url.com/image.png" alt="Broken image hidden">
   </div>
 </body>
 </html>
